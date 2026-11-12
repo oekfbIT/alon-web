@@ -1102,8 +1102,8 @@ span.mv-jersey { cursor: default; flex: none; }
 /* =========================================================
    Restructure 3: About first, interview chat, project grid
    ========================================================= */
-#about { padding-top: clamp(40px, 6vw, 72px); }
-#about .pill { margin-bottom: 18px; }
+#about { padding-top: clamp(20px, 3vw, 36px); }
+#about .pill { margin-bottom: 12px; }
 .about-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 650; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px; }
 
 .intro-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
