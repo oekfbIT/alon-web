@@ -1,6 +1,6 @@
 /* Vercel serverless function: POST /api/ask  { question, history? }
    Retrieval-augmented answer over src/knowledge.js.
-   Needs ANTHROPIC_API_KEY in the Vercel project's environment variables (optional ASK_MODEL).
+   Needs OPENAI_API_KEY in the Vercel project's environment variables (optional ASK_MODEL, default gpt-5.6-luna).
    Without a key it returns 501 and the browser falls back to showing the retrieved passages. */
 import { knowledge } from '../src/knowledge.js';
 import { createRetriever } from '../src/retrieve.js';
@@ -19,7 +19,7 @@ Rules:
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
-  const key = process.env.ANTHROPIC_API_KEY;
+  const key = process.env.OPENAI_API_KEY;
   if (!key) return res.status(501).json({ error: 'no model configured' });
 
   const ip = (req.headers['x-forwarded-for'] || '').split(',')[0] || 'anon';
@@ -36,19 +36,23 @@ export default async function handler(req, res) {
   const sources = found.map(({ title, url }) => ({ title, url }));
 
   try {
-    const r = await fetch('https://api.anthropic.com/v1/messages', {
+    const r = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST',
-      headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+      headers: { 'content-type': 'application/json', authorization: `Bearer ${key}` },
       body: JSON.stringify({
-        model: process.env.ASK_MODEL || 'claude-haiku-5-5',
-        max_tokens: 400,
-        system: SYSTEM,
-        messages: [{ role: 'user', content: `<context>\n${context || '(no matching passages)'}\n</context>\n\nQuestion: ${question}` }],
+        model: process.env.ASK_MODEL || 'gpt-5.6-luna',
+        reasoning: { effort: 'none' },
+        max_output_tokens: 400,
+        instructions: SYSTEM,
+        input: `<context>\n${context || '(no matching passages)'}\n</context>\n\nQuestion: ${question}`,
       }),
     });
     if (!r.ok) return res.status(502).json({ error: 'model error', sources });
     const data = await r.json();
-    const answer = (data.content || []).filter((c) => c.type === 'text').map((c) => c.text).join('').trim();
+    const answer = (data.output || []).filter((o) => o.type === 'message')
+      .flatMap((o) => o.content || []).filter((c) => c.type === 'output_text')
+      .map((c) => c.text).join('').trim();
+    if (!answer) return res.status(502).json({ error: 'empty answer', sources });
     return res.status(200).json({ answer, sources, mode: 'model' });
   } catch (e) {
     return res.status(502).json({ error: 'model unreachable', sources });

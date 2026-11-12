@@ -2,6 +2,7 @@ import "./projects.js";
 import "./toolbox.js";
 import "./ask.js";
 import "./cv.js";
+import "./vision-demo.js";
 /* Alon Yakoby portfolio — small, dependency-free interactions */
 (function () {
   var root = document.documentElement;
