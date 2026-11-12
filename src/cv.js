@@ -42,3 +42,30 @@ if (secs.length && 'IntersectionObserver' in window) {
   }, { rootMargin: '-45% 0px -50% 0px' });
   secs.forEach((s) => io.observe(s));
 }
+
+/* Résumé panels: list what was built in each role, linking to the details */
+import { projects } from './projects-data.js';
+document.querySelectorAll('.role-built[data-org]').forEach((box) => {
+  const items = projects.filter((p) => p.org === box.dataset.org && p.link !== `/experience/${box.dataset.org}.html`);
+  if (!items.length) { box.remove(); return; }
+  const h = document.createElement('h4'); h.textContent = `Built here · ${items.length}`;
+  const ul = document.createElement('ul');
+  items.forEach((p) => {
+    const li = document.createElement('li'); const a = document.createElement('a');
+    a.href = p.link; a.textContent = p.title;
+    if (/^https?:/.test(p.link)) { a.target = '_blank'; a.rel = 'noopener'; }
+    li.append(a); ul.append(li);
+  });
+  box.append(h, ul);
+});
+
+/* Role pages: switch the laptop screenshot */
+document.querySelectorAll('.device-stage').forEach((stage) => {
+  const img = stage.querySelector('.laptop img');
+  const btns = stage.querySelectorAll('.device-tabs button');
+  btns.forEach((b) => b.addEventListener('click', () => {
+    btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    img.src = b.dataset.src; img.alt = b.dataset.alt;
+    const bar = stage.querySelector('.laptop-bar span'); if (bar && b.dataset.url) bar.textContent = b.dataset.url;
+  }));
+});

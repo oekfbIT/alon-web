@@ -1,155 +1,84 @@
-/* =========================================================
-   Things I've built
-   Edit the data below to add, remove or reorder projects.
-   status: 'Live' | 'In progress' | 'Shipped' | 'Exploring'
-   link: a case study (/work/...) or a live site; external links open in a new tab.
-   ========================================================= */
-export const categories = {
-  ai: { label: 'AI & ML', color: '#0f9488' },
-  full: { label: 'Full-Stack', color: '#4f6bd8' },
-  backend: { label: 'Backend & Data', color: '#c2410c' },
-  mobile: { label: 'Mobile', color: '#a3489b' },
-  delivery: { label: 'Delivery & Infra', color: '#64748b' },
-};
+import { categories, projects } from './projects-data.js';
+import { roleById, roleUrl, logoUrl } from './roles.js';
+export { categories, projects };
 
-export const projects = [
-  {
-    cat: 'ai', status: 'In progress', title: 'AI Match Analysis',
-    text: 'Takes a match recording or live stream and finds shots and key events, tracks where players move and identifies who they are from preloaded squads. YOLOv8 trained on my own Label Studio data, connected to my backend, with an MCP-connected vision model.',
-    tech: ['YOLOv8', 'Label Studio', 'Python', 'MCP', 'Vision model', 'Video streams', 'Tracking'],
-    when: 'For our league · 2026', link: '/work/match-vision.html', linkLabel: 'Details',
-  },
-  {
-    cat: 'ai', status: 'Live', title: 'AI Match Previews & Reviews',
-    text: 'German match previews and matchday reviews on oekfb.eu. The backend computes the football facts; the model only chooses which verified facts to use, and the backend writes the article.',
-    tech: ['Swift', 'Vapor', 'JSON Schema outputs', 'OpenAI-compatible API', 'MongoDB', 'Durable jobs'],
-    when: 'ÖKFB', link: '/work/oekfb-federation-platform.html#ai', linkLabel: 'Details',
-  },
-  {
-    cat: 'ai', status: 'Shipped', title: 'Vision AI Card Matching',
-    text: 'Matches each of 2 million marketplace listings to the right card out of 400,000, using DINOv2 image embeddings and Qdrant vector search behind a FastAPI service.',
-    tech: ['Python', 'FastAPI', 'PyTorch', 'DINOv2', 'Qdrant', 'Docker'],
-    when: 'THATSIT! · Nov 2025 – Present', link: '/work/thatsit-vision-matching.html', linkLabel: 'Details',
-  },
-  {
-    cat: 'ai', status: 'Live', title: 'Generated Kit Images',
-    text: 'Turns an uploaded jersey into a standardised home or away kit illustration, validates the transparent PNG and shows a preview before it is saved.',
-    tech: ['Image generation', 'PNG validation', 'Firebase Storage', 'React', 'Swift'],
-    when: 'ÖKFB', link: '/work/oekfb-federation-platform.html#ai', linkLabel: 'Details',
-  },
-  {
-    cat: 'ai', status: 'Exploring', title: 'AI Judge for Card Games',
-    text: 'An iPhone camera follows a trading card game, an AI agent checks whether plays are legal, keeps score and talks to the players.',
-    tech: ['Vision AI', 'Real-time video', 'Voice', 'Agents', 'iOS'],
-    when: 'Personal project', link: '/index.html#beyond', linkLabel: 'More',
-  },
-  {
-    cat: 'full', status: 'Live', title: 'Football League Website',
-    text: 'Public site for leagues across Austria: fixtures, live scores, tables, leaderboards, team and player pages, AI previews, transfers, suspensions and search.',
-    tech: ['React 18', 'TypeScript', 'Parcel', 'Storybook', 'Swift', 'Vapor'],
-    when: 'ÖKFB · Since Nov 2023', link: 'https://www.oekfb.eu/', linkLabel: 'Live site',
-  },
-  {
-    cat: 'full', status: 'Live', title: 'Referee Match Portal',
-    text: 'Referees run matches from their phone: match sheets, kick-off to full time, goals and cards, corrections, no-shows and the match report.',
-    tech: ['React', 'Material UI', 'Swift', 'Vapor', 'MongoDB'],
-    when: 'ÖKFB · Since Nov 2023', link: '/work/oekfb-federation-platform.html#matchday', linkLabel: 'Details',
-  },
-  {
-    cat: 'full', status: 'Live', title: 'Team Self-Service Portal',
-    text: 'Teams manage their squad, register players and trainers, upload photos, follow contracts and finances, request transfers and message the office.',
-    tech: ['React', 'Material UI', 'Redux', 'Firebase', 'Swift', 'Vapor'],
-    when: 'ÖKFB · Since Nov 2023', link: 'https://team.oekfb.eu/', linkLabel: 'Live site',
-  },
-  {
-    cat: 'full', status: 'Live', title: 'Federation Admin Dashboard',
-    text: 'Leagues, seasons, fixtures, referees, team applications, discipline, transfers, fees, content, email templates, push notifications and analytics.',
-    tech: ['React', 'Ant Design', 'Redux', 'React Quill', 'ApexCharts', 'Swift'],
-    when: 'ÖKFB · Since Nov 2023', link: '/work/oekfb-federation-platform.html#platform', linkLabel: 'Details',
-  },
-  {
-    cat: 'full', status: 'In progress', title: 'Goodfield',
-    text: 'All-in-one platform for padel, tennis and other sports clubs: a branded public booking site plus a back office for bookings, events, finance and teams.',
-    tech: ['Product design', 'Bookings', 'Payments', 'Back office', 'Multi-venue'],
-    when: 'Founder · 2026', link: '/index.html#beyond', linkLabel: 'More',
-  },
-  {
-    cat: 'backend', status: 'Live', title: 'Payments & Team Onboarding',
-    text: 'Document-based team registration and Stripe payments with verified webhooks, idempotent credits, versioned fees, invoices and recovery after interruptions.',
-    tech: ['Swift', 'Vapor', 'Stripe', 'Webhooks', 'Vapor Queues', 'SMTP'],
-    when: 'ÖKFB', link: '/work/oekfb-federation-platform.html#payments', linkLabel: 'Details',
-  },
-  {
-    cat: 'backend', status: 'Live', title: 'GA4 Analytics Importer',
-    text: 'Native Swift importer for Google Analytics 4 with hourly snapshots, shared leases across replicas, caching and historical and realtime dashboards.',
-    tech: ['Swift', 'GA4 APIs', 'MongoDB', 'Leases', 'React'],
-    when: 'ÖKFB', link: '/work/oekfb-federation-platform.html#analytics', linkLabel: 'Details',
-  },
-  {
-    cat: 'delivery', status: 'Shipped', title: 'Release Pipeline Rebuild',
-    text: 'Rebuilt CI/CD with Jenkins, GitHub workflows and cloned Kubernetes environments, halving deployment time across 28 releases.',
-    tech: ['Jenkins', 'GitHub workflows', 'Kubernetes', 'Docker', 'Testing'],
-    when: 'adesso · 2022 – 2023', link: '/work/adesso-release-pipeline.html', linkLabel: 'Details',
-  },
-  {
-    cat: 'delivery', status: 'Shipped', title: 'Hotel Self-Check-in',
-    text: 'Mobile self-check-in and an IT modernisation for a 200-room hotel, from front-desk analysis to go-live, with around 30% less front-desk effort.',
-    tech: ['Self-service flows', 'Server migration', 'Vendor integration'],
-    when: 'Bridge · 2025', link: '/work/bridge-hotel-self-checkin.html', linkLabel: 'Details',
-  },
-  {
-    cat: 'mobile', status: 'Shipped', title: 'Losleben iOS App',
-    text: 'Native iOS app of the Vienna Insurance Group with around 30,000 users: features, testing, CI/CD and App Store releases.',
-    tech: ['Swift', 'iOS', 'Fastlane', 'CI/CD', 'Scrum'],
-    when: 'twinformatics · 2020 – 2022', link: '/index.html#experience', linkLabel: 'More',
-  },
-  {
-    cat: 'mobile', status: 'Shipped', title: 'Product Scanner App',
-    text: 'Scanner app for capturing products on site, part of a CMS and management system rollout across 12 locations worldwide.',
-    tech: ['Barcode scanning', 'Inventory', 'Workflow automation'],
-    when: 'Bergner Group · 2012 – 2019', link: '/index.html#experience', linkLabel: 'More',
-  },
-];
-
-/* ---------- Rendering ---------- */
+/* ---------- Rendering: an always-open grid of project cards ---------- */
 const MAX_TECH = 4;
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+const slug = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-function card(p, i) {
+function logoBadge(r, cls) {
+  const lg = el('span', `logo ${cls}`); lg.dataset.mono = r ? r.mono : '✦'; lg.setAttribute('aria-hidden', 'true');
+  if (r) {
+    const img = el('img'); img.src = logoUrl(r.id); img.alt = ''; img.width = 40; img.height = 40; img.loading = 'lazy';
+    img.addEventListener('error', () => img.remove());
+    lg.append(img);
+  }
+  return lg;
+}
+
+function card(p) {
   const c = categories[p.cat];
+  const r = p.org && roleById[p.org];
   const a = el('article', 'pj-card');
   a.dataset.cat = p.cat;
-  const top = el('div', 'pj-top');
+  a.style.setProperty('--c', c.color);
+
+  // Preview image (or a placeholder until one is added)
+  const media = el('a', 'pj-media');
+  media.href = p.link; media.tabIndex = -1; media.setAttribute('aria-hidden', 'true');
+  if (/^https?:/.test(p.link)) { media.target = '_blank'; media.rel = 'noopener'; }
+  const ph = el('span', 'pj-ph');
+  ph.append(logoBadge(r, 'logo-xl'), el('small', null, 'Preview coming soon'));
+  media.append(ph);
+  const img = el('img'); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+  const ok = () => { if (img.naturalWidth > 0) media.classList.add('has-img'); };
+  img.addEventListener('load', ok);
+  img.addEventListener('error', () => img.remove());
+  img.src = p.image || `/work/projects/${slug(p.title)}.webp`;
+  media.append(img);
+  if (img.complete) ok();
+  const st = el('span', 'pj-status' + (p.status === 'Live' ? ' is-live' : p.status === 'In progress' ? ' is-progress' : ''), p.status);
+  media.append(st);
+  if (r) media.append(logoBadge(r, 'logo-sm pj-badge'));
+
+  const body = el('div', 'pj-body');
   const cat = el('span', 'pj-cat');
   const dot = el('i', 'pj-dot'); dot.style.setProperty('--c', c.color);
   cat.append(dot, c.label);
-  const st = el('span', 'pj-status' + (p.status === 'Live' ? ' is-live' : p.status === 'In progress' ? ' is-progress' : ''), p.status);
-  top.append(cat, st);
-  const h = el('h3', null, p.title);
+  const h = el('h3'); const hl = el('a', null, p.title); hl.href = p.link;
+  if (/^https?:/.test(p.link)) { hl.target = '_blank'; hl.rel = 'noopener'; }
+  h.append(hl);
   const t = el('p', null, p.text);
   const tech = el('ul', 'pj-tech');
   p.tech.slice(0, MAX_TECH).forEach((x) => tech.appendChild(el('li', null, x)));
   if (p.tech.length > MAX_TECH) { const m = el('li', 'more', '+' + (p.tech.length - MAX_TECH)); m.title = p.tech.slice(MAX_TECH).join(', '); tech.appendChild(m); }
+
   const foot = el('div', 'pj-foot');
-  const link = el('a', null, (p.linkLabel || 'Details') + ' ↗');
-  link.href = p.link;
-  if (/^https?:/.test(p.link)) { link.target = '_blank'; link.rel = 'noopener'; }
-  link.setAttribute('aria-label', `${p.linkLabel || 'Details'}: ${p.title}`);
-  foot.append(el('span', null, p.when), link);
-  a.append(top, h, t, tech, foot);
+  if (r) {
+    const org = el('a', 'pj-org'); org.href = roleUrl(r.id); org.title = `More from ${r.org}`;
+    const rest = p.when.includes('·') ? p.when.slice(p.when.indexOf('·') + 1).trim() : '';
+    const txt = el('span', 'pj-org-txt'); txt.append(el('b', null, r.short)); if (rest) txt.append(el('small', null, rest));
+    org.append(txt); foot.append(org);
+  } else foot.append(el('span', null, p.when));
+  const self = r && p.link === roleUrl(r.id);
+  if (!self) {
+    const link = el('a', 'pj-link', (p.linkLabel || 'Details') + ' ↗'); link.href = p.link;
+    if (/^https?:/.test(p.link)) { link.target = '_blank'; link.rel = 'noopener'; }
+    link.setAttribute('aria-label', `${p.linkLabel || 'Details'}: ${p.title}`);
+    foot.append(link);
+  }
+  body.append(cat, h, t, tech, foot);
+  a.append(media, body);
   return a;
 }
 
 const root = document.getElementById('projects-app');
 if (root) {
   const filters = root.querySelector('.pj-filters');
-  const track = root.querySelector('.pj-track');
-  const cur = root.querySelector('.pj-counter b');
-  const total = root.querySelector('.pj-counter .total');
-  const bar = root.querySelector('.pj-counter .bar i');
-  const [prev, next] = root.querySelectorAll('.pj-nav button');
+  const grid = root.querySelector('.pj-grid');
   const cards = projects.map(card);
-  cards.forEach((c) => track.appendChild(c));
+  cards.forEach((c) => grid.appendChild(c));
 
   const counts = { all: projects.length };
   projects.forEach((p) => { counts[p.cat] = (counts[p.cat] || 0) + 1; });
@@ -162,28 +91,9 @@ if (root) {
   };
   mk('all', 'All');
   Object.entries(categories).forEach(([k, c]) => counts[k] && mk(k, c.label, c.color));
-
-  const visible = () => cards.filter((c) => !c.hidden);
-  function update() {
-    const v = visible();
-    const step = v.length > 1 ? v[1].offsetLeft - v[0].offsetLeft : 1;
-    const idx = Math.min(v.length - 1, Math.round(track.scrollLeft / step));
-    cur.textContent = String(v.length ? idx + 1 : 0).padStart(2, '0');
-    total.textContent = String(v.length).padStart(2, '0');
-    bar.style.width = (v.length ? ((idx + 1) / v.length) * 100 : 0) + '%';
-    prev.disabled = track.scrollLeft <= 2;
-    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-  }
   filters.addEventListener('click', (e) => {
     const b = e.target.closest('button'); if (!b) return;
     filters.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
     cards.forEach((c) => { c.hidden = b.dataset.f !== 'all' && c.dataset.cat !== b.dataset.f; });
-    track.scrollTo({ left: 0 }); update();
   });
-  const by = (dir) => { const v = visible(); const step = v.length > 1 ? v[1].offsetLeft - v[0].offsetLeft : track.clientWidth; track.scrollBy({ left: dir * step, behavior: 'smooth' }); };
-  prev.addEventListener('click', () => by(-1));
-  next.addEventListener('click', () => by(1));
-  track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
-  addEventListener('resize', update);
-  update();
 }

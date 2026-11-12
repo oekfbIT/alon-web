@@ -2,6 +2,8 @@ import "./projects.js";
 import "./toolbox.js";
 import "./ask.js";
 import "./cv.js";
+import "./xp-highlights.js";
+import "./projects-view.js";
 import "./vision-demo.js";
 /* Alon Yakoby portfolio — small, dependency-free interactions */
 (function () {

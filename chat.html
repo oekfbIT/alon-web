@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Interview me | Alon Yakoby, Full-Stack & AI Engineer</title>
+<meta name="description" content="Ask Alon Yakoby interview questions. An AI answers in his voice from his CV and project notes, with sources.">
+<meta name="author" content="Alon Yakoby">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Interview me | Alon Yakoby">
+<meta property="og:description" content="Ask interview questions about my work, stack and AI experience. Answers come from my CV and project notes.">
+<meta property="og:image" content="/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231f3a5f'/%3E%3Cpath d='M4 17 C 8 17, 8 7, 12 7 S 17 12, 20 12' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="/src/style.css">
+<link rel="stylesheet" href="/src/chat.css">
+<script type="module" src="/src/chat.js"></script>
+</head>
+<body class="chat-page">
+<a class="skip" href="#composer-input">Skip to the question box</a>
+
+<aside class="cp-side" id="cp-side" aria-label="About Alon">
+  <div class="cp-me">
+    <figure class="cp-avatar"><img src="/alon-portrait.jpg" alt="Portrait of Alon Yakoby" width="96" height="96" onerror="this.parentNode.classList.add('no-photo')"><span aria-hidden="true">AY</span></figure>
+    <div>
+      <p class="cp-name">Alon Yakoby</p>
+      <p class="cp-role">Full-Stack &amp; AI Engineer</p>
+    </div>
+  </div>
+  <p class="cp-avail"><i aria-hidden="true"></i>Available Dec 2026 · Vienna</p>
+  <button type="button" class="cp-new" id="cp-new"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>New conversation</button>
+
+  <nav class="cp-section" aria-labelledby="cp-exp-h">
+    <h2 id="cp-exp-h">Experience</h2>
+    <ul class="cp-roles" id="cp-roles"></ul>
+  </nav>
+
+  <section class="cp-section" aria-labelledby="cp-skills-h">
+    <h2 id="cp-skills-h">Core stack</h2>
+    <ul class="cp-skills">
+      <li>Swift · Vapor</li><li>Python · FastAPI</li><li>TypeScript · React</li><li>PyTorch</li><li>DINOv2 · Qdrant</li><li>YOLOv8</li><li>LLMs · structured outputs</li><li>MCP</li><li>MongoDB · PostgreSQL</li><li>Docker · Kubernetes</li><li>Stripe</li>
+    </ul>
+  </section>
+
+  <section class="cp-section" aria-labelledby="cp-edu-h">
+    <h2 id="cp-edu-h">Education &amp; languages</h2>
+    <p class="cp-small">BA Industrial Design, Raffles Design Institute · Economics, South China University of Technology</p>
+    <p class="cp-small">German and English native · Hebrew fluent · Chinese conversational</p>
+  </section>
+
+  <div class="cp-links">
+    <a href="/resume.html">Résumé</a>
+    <a href="https://www.linkedin.com/in/alon-yakoby" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:alon.yakoby@gmail.com">Email</a>
+    <a href="/">Portfolio</a>
+  </div>
+</aside>
+<div class="cp-scrim" id="cp-scrim" hidden></div>
+
+<main class="cp-main" id="main">
+  <header class="cp-top">
+    <button type="button" class="icon-btn cp-menu" id="cp-menu" aria-controls="cp-side" aria-expanded="false" aria-label="Show résumé"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="cp-back" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Portfolio</a>
+    <p class="cp-title">Interview me</p>
+    <button class="icon-btn theme-btn" aria-label="Switch light or dark theme"><svg class="theme-light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="theme-dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+  </header>
+
+  <div class="cp-log" id="cp-log" aria-live="polite">
+    <section class="cp-empty" id="cp-empty">
+      <figure class="cp-avatar cp-avatar-lg"><img src="/alon-portrait.jpg" alt="" width="160" height="160" onerror="this.parentNode.classList.add('no-photo')"><span aria-hidden="true">AY</span></figure>
+      <h1>Interview me.</h1>
+      <p class="cp-lede">Ask what you’d ask in a first interview: my experience, the AI I’ve shipped, how I work. Answers are written by an AI in my voice, only from my CV and project notes, with links to the sources.</p>
+      <div class="cp-starters" id="cp-starters"></div>
+    </section>
+  </div>
+
+  <form class="cp-composer" id="cp-form" autocomplete="off">
+    <label class="sr" for="composer-input">Your question</label>
+    <textarea id="composer-input" rows="1" maxlength="500" placeholder="Ask me anything about my work…"></textarea>
+    <button type="submit" aria-label="Send question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  </form>
+  <p class="cp-note">AI-generated answers from my own notes. For anything important, <a href="mailto:alon.yakoby@gmail.com">email me</a>.</p>
+</main>
+</body>
+</html>

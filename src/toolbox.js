@@ -5,7 +5,7 @@
    ========================================================= */
 export const groups = {
   backend: { label: 'Backend', color: '#4f6bd8' },
-  ai: { label: 'AI & ML', color: '#0f9488' },
+  ai: { label: 'AI & ML', color: '#6b5fc7' },
   front: { label: 'Frontend & Mobile', color: '#a3489b' },
   data: { label: 'Data & Integrations', color: '#c2410c' },
   ops: { label: 'Cloud & DevOps', color: '#64748b' },
@@ -64,42 +64,21 @@ export const skills = [
   { name: 'Mentoring', g: 'core', level: 1 },
 ];
 
-/* ---------- Rendering ---------- */
-const NOW = 2026;
+/* ---------- Rendering: one row per area ---------- */
+const NOW = new Date().getFullYear();
 const mk = (t, c, x) => { const n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
-const root = document.getElementById('toolbox-app');
-if (root) {
-  const cloud = root.querySelector('.tb-cloud');
-  const legend = root.querySelector('.tb-legend');
-  const strong = root.querySelector('.tb-strong');
-  // interleave groups so colours spread across the cloud, strongest towards the middle
-  const order = [...skills].sort((a, b) => b.level - a.level);
-  const mid = [];
-  order.forEach((s, i) => (i % 2 ? mid.push(s) : mid.unshift(s)));
-  mid.forEach((s, i) => {
-    const li = mk('li', `tb-skill lv${s.level}`, s.name);
-    li.dataset.g = s.g;
-    li.style.setProperty('--c', groups[s.g].color);
-    li.style.setProperty('--d', `${(i % 7) * 0.4}s`);
-    cloud.appendChild(li);
-  });
+const list = document.querySelector('#toolbox-app .sk-list');
+if (list) {
   Object.entries(groups).forEach(([k, g]) => {
-    const b = mk('button'); b.type = 'button'; b.dataset.g = k; b.setAttribute('aria-pressed', 'false');
-    const d = mk('i', 'pj-dot'); d.style.setProperty('--c', g.color);
-    b.append(d, g.label);
-    legend.appendChild(b);
-  });
-  legend.addEventListener('click', (e) => {
-    const b = e.target.closest('button'); if (!b) return;
-    const on = b.getAttribute('aria-pressed') !== 'true';
-    legend.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(on && x === b)));
-    cloud.dataset.focus = on ? b.dataset.g : '';
-    cloud.querySelectorAll('.tb-skill').forEach((s) => s.classList.toggle('is-dim', on && s.dataset.g !== b.dataset.g));
-  });
-  skills.filter((s) => s.strong).forEach((s) => {
-    const li = mk('li');
-    li.append(mk('span', null, s.name));
-    if (s.since) { const y = mk('small', null, `${NOW - s.since}y`); y.title = `since ${s.since}`; li.append(y); }
-    strong.appendChild(li);
+    const items = skills.filter((s) => s.g === k).sort((a, b) => b.level - a.level);
+    if (!items.length) return;
+    const dd = mk('dd'); const ul = mk('ul', 'sk-items');
+    items.forEach((s) => {
+      const li = mk('li', s.strong ? 'is-strong' : null, s.name);
+      if (s.strong && s.since) { const y = mk('small', null, `${NOW - s.since}y`); y.title = `since ${s.since}`; li.append(y); }
+      ul.append(li);
+    });
+    dd.append(ul);
+    list.append(mk('dt', null, g.label), dd);
   });
 }

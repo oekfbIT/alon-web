@@ -4,9 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "roles": "node scripts/build-roles.mjs",
+    "knowledge": "node scripts/build-knowledge.mjs",
+    "predev": "npm run roles && npm run projects && npm run knowledge",
     "dev": "vite",
+    "prebuild": "npm run roles && npm run projects && npm run knowledge",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "projects": "node scripts/build-projects.mjs"
   },
   "devDependencies": {
     "vite": "^8.3.7"
