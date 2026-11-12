@@ -50,6 +50,7 @@ Dafna's original case studies, portrait and preview image are kept in `_archive/
 ## The "Ask me" chat
 Questions are matched against `src/knowledge.js` with a small BM25 search.
 - Locally (`npm run dev`) and on Vercel without a key, it answers directly from the best-matching entries ("from my notes").
+- Locally with a model: put your key in `.env.local` (`OPENAI_API_KEY=sk-...`, see `.env.example`) and run `npm run dev`; `vite.config.js` serves `/api/ask` from `api/ask.js`. Restart the dev server after changing `.env.local`.
 - On Vercel with a model: add `OPENAI_API_KEY` under Project → Settings → Environment Variables (optional `ASK_MODEL`, default `gpt-5.6-luna`).
   `api/ask.js` then lets the model write the answer, only from the retrieved entries, with sources. It has a simple rate limit.
 `src/toolkit.js` (the old dark skills grid) is no longer used and can be deleted.
