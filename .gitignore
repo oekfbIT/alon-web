@@ -1,0 +1,10 @@
+node_modules
+dist
+.vercel
+.DS_Store
+
+# old copy of Dafna's repo history
+.git-dafna-backup/
+.env
+.env.*
+*.swp

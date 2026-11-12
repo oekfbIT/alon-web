@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Designing a B2B Logistics Platform Around Real Carrier Workflows | Dafna Dassa</title>
+<meta name="description" content="Turning carrier-specific workflows, integrations and operational rules into a more consistent shipping experience for merchants.">
+<meta name="keywords" content="Dafna Dassa, Product Manager Vienna, Technical Product Manager, AI Product Manager, Fintech Product Manager, B2B SaaS Product Manager, Digital Transformation Product Manager, Logistics Product Manager">
+<meta name="author" content="Dafna Dassa">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Designing a B2B Logistics Platform Around Real Carrier Workflows | Dafna Dassa">
+<meta property="og:description" content="Turning carrier-specific workflows, integrations and operational rules into a more consistent shipping experience for merchants.">
+<meta property="og:image" content="/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230f766e'/%3E%3Cpath d='M4 17 C 8 17, 8 7, 12 7 S 17 12, 20 12' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='4.5' cy='17' r='2.2' fill='white'/%3E%3Ccircle cx='19.5' cy='12' r='2.2' fill='white'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/src/style.css">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/index.html"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18 C 8 18, 8 6, 13 6 S 18 12, 21 12" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round"/><circle cx="3.5" cy="18" r="2.6" fill="var(--accent)"/><circle cx="20.5" cy="12" r="2.6" fill="var(--paper)" stroke="var(--accent)" stroke-width="2"/></svg>Dafna Dassa</a>
+    <div style="display:flex;align-items:center">
+      <nav class="nav" aria-label="Main">
+        <a href="/index.html#work">Work</a>
+        <a href="/index.html#areas">Expertise</a>
+        <a href="/index.html#ai">AI</a>
+        <a href="/index.html#experience">Experience</a>
+        <a href="/index.html#contact">Contact</a>
+      </nav>
+      <button class="icon-btn theme-btn" aria-label="Switch light or dark theme"><svg class="theme-light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="theme-dark-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+      <button class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+
+<section class="cs-hero">
+  <div class="wrap">
+    <a class="back" href="/index.html#work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>All work</a>
+    <div class="cs-ctx">CollectHub</div>
+    <h1>Designing a B2B Logistics Platform Around Real Carrier Workflows</h1>
+    <p class="lede">Turning carrier-specific workflows, integrations and operational rules into a more consistent shipping experience for merchants.</p>
+    <ul class="tags"><li>B2B SaaS</li><li>Logistics</li><li>APIs</li><li>Integrations</li><li>Operations</li></ul>
+  </div>
+</section>
+<div class="wrap">
+  <div class="cs-body">
+    <nav class="cs-toc" aria-label="On this page"><ol><li><a href="#overview">Overview</a></li><li><a href="#role">My role</a></li><li><a href="#approach">How I approached it</a></li><li><a href="#decisions">Key decisions</a></li><li><a href="#complexity">Technical and operational complexity</a></li><li><a href="#outcome">Outcome</a></li><li><a href="#learned">What I learned</a></li><li><a href="#skills">Relevant skills</a></li></ol></nav>
+    <article>
+<section class="cs-section" id="overview"><h2>Overview</h2><p>CollectHub is a B2B logistics product that helps merchants create and manage shipments across external carriers.</p><p>What looks like a simple shipping workflow on the surface depends on carrier-specific requirements, customer configuration, API behaviour, tracking, billing and, for international shipments, customs documentation.</p><p class="callout">My role was to help translate that complexity into clear product workflows, technical requirements and operational processes that merchants and internal teams could actually use.</p><p>A second challenge was scalability: onboarding a new customer should not require Engineering to manually configure every account.</p><div class="figure explode"><span class="fake-btn" aria-hidden="true">Create shipment</span><ul class="behind"><li>Merchant configuration</li><li>Carrier requirements</li><li>Shipment data</li><li>API integration</li><li>Labels</li><li>Tracking</li><li>Billing</li><li>Error handling</li><li>Customs data for international shipping</li></ul><p class="fig-cap">What sits behind one button.</p></div></section>
+<section class="cs-section" id="role"><h2>My role</h2><p>My role covered both the merchant-facing product experience and the operational and technical workflows behind it.</p><ul class="cols-2"><li>Shipment and label workflows</li><li>Tracking, cancellations and returns</li><li>Pickup and scheduled-pickup behaviour</li><li>Merchant onboarding and configuration</li><li>Carrier requirements and API behaviour</li><li>Bulk / CSV shipment creation</li><li>Billing and shipping-cost visibility</li><li>International shipping and customs requirements</li><li>QA and production rollout</li><li>External carrier coordination</li></ul><p>I worked closely with Engineering and external providers on request/response behaviour, required fields, credentials, mappings, provider limitations, edge cases and QA.</p></section>
+<section class="cs-section" id="approach"><h2>How I approached it</h2><div class="ai-principles">
+  <div><h3 class="sub">Standardise the experience without hiding necessary complexity</h3><p>Different carriers require different data, credentials and behaviours. The product should absorb as much of that complexity as possible, so merchants don’t need to understand each carrier’s technical requirements.</p></div>
+  <div><h3 class="sub">Make onboarding scalable</h3><p>If every new customer needs Engineering to configure credentials, organisation IDs, billing information or carrier settings by hand, the product doesn’t scale. I worked on admin capabilities that let internal teams such as Sales configure customers more independently.</p></div>
+  <div><h3 class="sub">Design for real operational failure</h3><p>Shipping integrations fail in the real world. The product needs defined behaviour for missing configuration, carrier errors, timeouts and incomplete data, rather than treating them as exceptional edge cases.</p></div>
+</div></section>
+<section class="cs-section" id="decisions"><h2>Key decisions</h2><ul class="decisions"><li><strong>One consistent merchant workflow</strong><span>Carrier-specific differences are handled behind the product wherever possible, rather than pushed onto the merchant.</span></li><li><strong>Onboarding should not depend on Engineering</strong><span>Internal teams configure customers through structured admin workflows instead of relying on developers for every new setup.</span></li><li><strong>Test the hardest operational scenarios</strong><span>International shipments were used to validate the more complex data and documentation requirements before broader rollout.</span></li><li><strong>Configuration is part of the product</strong><span>Carrier credentials, customer identifiers, billing information and merchant settings are treated as a defined product workflow, not informal setup work.</span></li><li><strong>Bulk operations matter in B2B</strong><span>CSV and bulk shipment creation reduce repetitive manual entry for customers with higher shipment volumes.</span></li></ul></section>
+<section class="cs-section" id="complexity"><h2>Technical and operational complexity</h2><p>International shipping introduced additional complexity because non-EU shipments require structured customs information and documentation, such as:</p><ul class="cols-2"><li>Commercial invoices</li><li>Commodity descriptions</li><li>HS codes</li><li>Customs values</li><li>Importer information</li><li>Duties payer</li><li>Tax and customs identifiers</li><li>Electronic Trade Documents</li></ul><p>We tested international shipment flows to the UK, Switzerland and the US.</p><h3 class="sub">When integrations fail</h3><ul class="fail-grid"><li>Invalid carrier credentials</li><li>Missing merchant configuration</li><li>Provider API errors</li><li>Unexpected responses</li><li>Missing customs information</li><li>Timeouts</li><li>Partial responses</li></ul><p>The important product question was not only whether an integration failed, but what information the merchant or internal team needed in order to recover from it.</p><h3 class="sub">The commercial and operational side</h3><p>I also worked on shipping-cost information, carrier quotation data, billing-related configuration and operational status behaviour.</p></section>
+<section class="cs-section" id="outcome"><h2>Outcome</h2><p>The work helped create a more consistent B2B shipping experience across carrier-specific workflows, while making customer onboarding and configuration more scalable.</p><p>Merchants could work through a standardised shipment process, internal teams gained clearer tools for customer setup, and Engineering was less involved in repetitive onboarding configuration.</p><p>The platform also became better prepared for international shipping, bulk workflows and future system integrations.</p><div class="principle"><small>Product principle</small>The product should absorb carrier complexity so the merchant can focus on shipping, not integration details.</div></section>
+<section class="cs-section" id="learned"><h2>What I learned</h2><p>B2B products often look simple only because the complexity has been handled somewhere else. Good product management means deciding which complexity the product should absorb, which configuration users need to control, and how failures should be made understandable and recoverable.</p></section>
+<section class="cs-section" id="skills"><h2>Relevant skills</h2><ul class="tags"><li>B2B SaaS</li><li>Logistics Product Management</li><li>API &amp; Integration Management</li><li>Carrier Integrations</li><li>Merchant Onboarding</li><li>International Shipping</li><li>Operational Scalability</li><li>Technical Requirements</li><li>QA &amp; Edge-Case Design</li><li>External Partner Management</li><li>Admin Tooling</li><li>Cross-functional Product Delivery</li></ul></section>
+    </article>
+  </div>
+  <nav class="cs-nav" aria-label="More work">
+    <a href="ai-customer-assistant.html"><small>Previous</small><strong>Building a Safer AI Customer Assistant</strong></a>
+    <a class="next" href="dynamic-promotions.html"><small>Next</small><strong>Turning Pricing Rules into a Scalable Promotion Engine</strong></a>
+  </nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Dafna Dassa. Vienna, Austria.</span>
+    <span><a href="https://www.linkedin.com/in/dafna-dassa/">LinkedIn</a> &nbsp; <a href="mailto:dafna.d6@gmail.com">Email</a></span>
+  </div>
+</footer>
+</body>
+</html>
