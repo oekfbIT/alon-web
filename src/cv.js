@@ -1,3 +1,16 @@
+/* Company logos: try /logos/<id>.svg, then .png, then .webp; fall back to the monogram */
+const LOGO_EXT = ['png', 'svg', 'webp'];
+document.querySelectorAll('.logo img').forEach((img) => {
+  let k = 0;
+  const fail = () => {
+    k += 1;
+    if (k < LOGO_EXT.length) img.src = img.src.replace(/\.\w+$/, '.' + LOGO_EXT[k]);
+    else img.remove();
+  };
+  img.addEventListener('error', fail);
+  if (img.complete && img.naturalWidth === 0) fail();
+});
+
 /* Résumé timeline tabs + active section in the header nav */
 const tabs = [...document.querySelectorAll('.g-row[role="tab"]')];
 function select(t, focus) {
