@@ -52,13 +52,13 @@
   </div>
 </section>
 <div class="wrap pp-body">
-  <figure class="pp-preview is-empty"><span>Preview coming soon</span></figure>
+  <figure class="pp-preview"><img src="/work/projects/ai-judge-for-card-games.webp" alt="Preview of AI Judge for Card Games" loading="eager" decoding="async"></figure>
   <div class="pp-grid">
     <section class="pp-main">
+      <h2>Overview</h2><p>A judge for trading card games, starting with Yu-Gi-Oh!. An iPhone on a tripod films the table from above, and an AI follows the duel the way a human judge would: what was played, what attacked and what that did to the life points.</p><p>A screen next to the table shows both players' life points, updated as the game happens, together with a duel log of every summon, set card, attack and effect. A vision model reads the cards on the mat and the system keeps the game state in order, so the numbers on screen come from what actually happened.</p><p>Players can also just talk to it. Ask whether a play is allowed and the judge answers by voice with a ruling and the rule behind it. It is a personal project in progress; the preview shows a concept with invented cards and sample data.</p>
+      <h2>How a duel runs</h2><ol class="pp-steps"><li><strong>Watch.</strong> The phone on the tripod films the mat from above and the vision model finds cards, zones and their positions.</li><li><strong>Track.</strong> Every summon, set card, attack and graveyard move goes into the duel log, and the life points update on screen.</li><li><strong>Check.</strong> Each play is checked against the rules, for example one Normal Summon per turn, and marked as legal or not.</li><li><strong>Rule.</strong> Players ask by voice and get a spoken ruling with the reason, plus a note in the log.</li></ol>
+      <h2>What I built</h2><ul class="role-hl"><li>Designing the camera setup: one iPhone on a tripod, no special mat or sensors.</li><li>Detecting cards, zones and face-up or face-down state with a vision model.</li><li>Keeping a game state and duel log, so life points and rulings come from tracked events.</li><li>Adding voice, so players can ask the judge questions in the middle of a duel.</li></ul>
       
-      
-      
-      <h2>Built with</h2><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/lucide-eye.svg)" aria-hidden="true"></span>Vision AI</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-video.svg)" aria-hidden="true"></span>Real-time video</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-messages-square.svg)" aria-hidden="true"></span>Voice</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-sparkles.svg)" aria-hidden="true"></span>Agents</li><li>iOS</li></ul>
     </section>
     <aside class="pp-side">
       <dl>
@@ -67,7 +67,7 @@
         <dt>Type</dt><dd>Own project</dd>
         <dt>When</dt><dd>Personal project</dd>
       </dl>
-      
+      <h3 class="pp-side-h">Built with</h3><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/lucide-eye.svg)" aria-hidden="true"></span>Vision AI</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-video.svg)" aria-hidden="true"></span>Real-time video</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-messages-square.svg)" aria-hidden="true"></span>Voice</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-sparkles.svg)" aria-hidden="true"></span>Agents</li><li>iOS</li></ul>
     </aside>
   </div>
   

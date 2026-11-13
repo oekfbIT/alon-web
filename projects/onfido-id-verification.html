@@ -55,10 +55,10 @@
   <figure class="pp-preview"><img src="/work/projects/onfido-id-verification.webp" alt="Preview of Onfido ID Verification" loading="eager" decoding="async"></figure>
   <div class="pp-grid">
     <section class="pp-main">
+      <h2>Overview</h2><p>Before customers can use the Losleben app, they need to prove who they are. I implemented the identity check with the Onfido SDK: the customer scans an ID document and takes a selfie, and is verified before they get in.</p><p>The verified identity does two jobs: it authenticates users for access to the app, and it secures issuing insurance claims, so only the real policyholder can file them.</p>
+      <h2>How it works</h2><ol class="pp-steps"><li><strong>Scan the ID.</strong> The customer photographs their ID document in the app.</li><li><strong>Take a selfie.</strong> A selfie is compared with the photo on the document.</li><li><strong>Verify.</strong> Onfido checks the document and the match and returns the result to the app.</li><li><strong>Get access.</strong> A verified customer gets into the app and can issue claims.</li></ol>
+      <h2>What I built</h2><ul class="role-hl"><li>Integrated the Onfido SDK into the native iOS app in Swift.</li><li>Connected the verification result to the backend through REST APIs.</li><li>Tested the flow and shipped it with the app’s regular releases.</li></ul>
       
-      
-      
-      <h2>Built with</h2><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/swift.svg)" aria-hidden="true"></span>Swift</li><li>iOS</li><li>Onfido SDK</li><li>Identity verification</li><li>REST APIs</li></ul>
     </section>
     <aside class="pp-side">
       <dl>
@@ -67,7 +67,7 @@
         <dt>Built at</dt><dd><a class="pp-org" href="/experience/twinformatics.html"><span class="logo" data-mono="t" aria-hidden="true"><img src="/logos/twinformatics.png" alt="" width="40" height="40"></span>twinformatics GmbH · Vienna Insurance Group</a></dd><dt>My role</dt><dd>Senior iOS Engineer · Losleben app</dd>
         <dt>When</dt><dd>2020 – 2022</dd>
       </dl>
-      
+      <h3 class="pp-side-h">Built with</h3><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/swift.svg)" aria-hidden="true"></span>Swift</li><li>iOS</li><li>Onfido SDK</li><li>Identity verification</li><li>REST APIs</li></ul>
     </aside>
   </div>
   

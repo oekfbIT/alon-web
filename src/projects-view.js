@@ -47,4 +47,5 @@ if (root) {
   withImg.forEach((p) => feat.append(feature(p)));
   const list = root.querySelector('.pl-list');
   if (list) rest.forEach((p) => list.append(row(p)));
+  if (list && !rest.length) { list.remove(); root.querySelector('.more-title')?.remove(); }
 }

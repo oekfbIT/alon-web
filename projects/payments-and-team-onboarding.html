@@ -55,10 +55,10 @@
   <figure class="pp-preview"><img src="/work/projects/payments-and-team-onboarding.webp" alt="Preview of Payments &amp; Team Onboarding" loading="eager" decoding="async"></figure>
   <div class="pp-grid">
     <section class="pp-main">
+      <h2>Overview</h2><p>Registering a new team used to mean the federation office processing every application by hand: emails, paper contracts, payment checks and data entry. Now the whole path from application to a live team account runs automatically, and an admin only verifies the submitted information.</p><p>That saves more than two weeks of work per registration. Payments run through Stripe, and every step is designed for retries, interruptions and duplicates, so money and data stay correct.</p>
+      <h2>From application to live team</h2><ol class="pp-steps"><li><strong>Apply.</strong> The team applies and receives a welcome email with contract downloads and a protected upload link.</li><li><strong>Verify email.</strong> A signed, expiring email link confirms the applicant’s address.</li><li><strong>Upload documents.</strong> ID documents and signed contracts are uploaded. Partial submissions are allowed, but the set must be complete before the next step.</li><li><strong>Review.</strong> An admin verifies the information instead of processing it by hand.</li><li><strong>Pay.</strong> The fee is paid through Stripe. The balance is credited only after Stripe confirms the payment.</li><li><strong>Go live.</strong> The team is assigned to a league and created. The invoice and confirmation email are generated automatically.</li></ol>
+      <h2>What I built</h2><ul class="role-hl"><li>Document-based registration workflow with a protected upload link and required-document checks.</li><li>Stripe Checkout and PaymentIntents with signed webhooks, so only verified payments are credited.</li><li>Idempotency keys and durable receipts against double credits and debits.</li><li>Versioned fees: every financial action stores the fee version it used.</li><li>Automatic invoices and confirmation emails, with an invoice history per team.</li><li>Background jobs on Vapor Queues that resume interrupted payment, accounting and email processing.</li></ul>
       
-      
-      
-      <h2>Built with</h2><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/swift.svg)" aria-hidden="true"></span>Swift</li><li><span class="ico" style="--ico:url(/logos/skills/vapor.svg)" aria-hidden="true"></span>Vapor</li><li><span class="ico" style="--ico:url(/logos/skills/stripe.svg)" aria-hidden="true"></span>Stripe</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-plug-zap.svg)" aria-hidden="true"></span>Webhooks</li><li><span class="ico" style="--ico:url(/logos/skills/vapor.svg)" aria-hidden="true"></span>Vapor Queues</li><li>SMTP</li></ul>
     </section>
     <aside class="pp-side">
       <dl>
@@ -67,7 +67,7 @@
         <dt>Built at</dt><dd><a class="pp-org" href="/experience/oekfb.html"><span class="logo" data-mono="Ö" aria-hidden="true"><img src="/logos/oekfb.png" alt="" width="40" height="40"></span>Austrian Small-Field Football Federation (ÖKFB)</a></dd><dt>My role</dt><dd>Board Member · Head of Technology (volunteer)</dd>
         <dt>When</dt><dd>Nov 2023 – Present</dd>
       </dl>
-      
+      <h3 class="pp-side-h">Built with</h3><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/swift.svg)" aria-hidden="true"></span>Swift</li><li><span class="ico" style="--ico:url(/logos/skills/vapor.svg)" aria-hidden="true"></span>Vapor</li><li><span class="ico" style="--ico:url(/logos/skills/stripe.svg)" aria-hidden="true"></span>Stripe</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-plug-zap.svg)" aria-hidden="true"></span>Webhooks</li><li><span class="ico" style="--ico:url(/logos/skills/vapor.svg)" aria-hidden="true"></span>Vapor Queues</li><li>SMTP</li></ul>
     </aside>
   </div>
   

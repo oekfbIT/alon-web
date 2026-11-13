@@ -55,10 +55,10 @@
   <figure class="pp-preview"><img src="/work/oekfb/oekfb-preview.webp" alt="Preview of AI Match Previews &amp; Reviews" loading="eager" decoding="async"></figure>
   <div class="pp-grid">
     <section class="pp-main">
+      <h2>Overview</h2><p>Every week the federation used to publish a weekly report (Wochenbericht) covering all games played. Writing it by hand took two to three days, and there was no head-to-head information for upcoming matches.</p><p>Now previews before every match and a review of each matchday are generated in German on oekfb.eu. They bring players and teams back to the site with what they care about: table placements, top scorers, head-to-head records and the key games of the round.</p><p>Football fans notice a wrong number immediately, so the model never invents facts. The backend computes them, the model only chooses which verified facts to use, and the backend writes the article.</p>
+      <h2>How it works</h2><ol class="pp-steps"><li><strong>Compute.</strong> The backend calculates form, table position, head-to-head, scorers, discipline and confirmed absences, with a historical cutoff so a preview never uses results from after the match.</li><li><strong>Choose.</strong> Through strict JSON Schema outputs, the model selects and orders verified facts and title candidates.</li><li><strong>Write.</strong> The backend renders the article from those choices instead of publishing free text.</li><li><strong>Review.</strong> Admins review, edit, publish or delete each article.</li><li><strong>Publish.</strong> Previews go live before each match and a matchday review follows on oekfb.eu.</li></ol>
+      <h2>What I built</h2><ul class="role-hl"><li>Replaced a 2–3 day manual weekly report with automatic generation.</li><li>Computed football facts: form, table position, head-to-head, top scorers, discipline and absences.</li><li>Strict JSON Schema outputs so the model selects facts and the backend writes the text.</li><li>Persistent background jobs with bounded concurrency, retries with backoff and idempotency keys.</li><li>Every article records its source snapshot, model, prompt version, selected facts and token usage.</li><li>Provider-independent: an OpenAI-compatible adapter behind an interface.</li></ul>
       
-      
-      
-      <h2>Built with</h2><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/swift.svg)" aria-hidden="true"></span>Swift</li><li><span class="ico" style="--ico:url(/logos/skills/vapor.svg)" aria-hidden="true"></span>Vapor</li><li>JSON Schema outputs</li><li>OpenAI-compatible API</li><li><span class="ico" style="--ico:url(/logos/skills/mongodb.svg)" aria-hidden="true"></span>MongoDB</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-refresh-cw.svg)" aria-hidden="true"></span>Durable jobs</li></ul>
     </section>
     <aside class="pp-side">
       <dl>
@@ -67,7 +67,7 @@
         <dt>Built at</dt><dd><a class="pp-org" href="/experience/oekfb.html"><span class="logo" data-mono="Ö" aria-hidden="true"><img src="/logos/oekfb.png" alt="" width="40" height="40"></span>Austrian Small-Field Football Federation (ÖKFB)</a></dd><dt>My role</dt><dd>Board Member · Head of Technology (volunteer)</dd>
         <dt>When</dt><dd>Nov 2023 – Present</dd>
       </dl>
-      
+      <h3 class="pp-side-h">Built with</h3><ul class="tags"><li><span class="ico" style="--ico:url(/logos/skills/swift.svg)" aria-hidden="true"></span>Swift</li><li><span class="ico" style="--ico:url(/logos/skills/vapor.svg)" aria-hidden="true"></span>Vapor</li><li>JSON Schema outputs</li><li>OpenAI-compatible API</li><li><span class="ico" style="--ico:url(/logos/skills/mongodb.svg)" aria-hidden="true"></span>MongoDB</li><li><span class="ico" style="--ico:url(/logos/skills/lucide-refresh-cw.svg)" aria-hidden="true"></span>Durable jobs</li></ul>
     </aside>
   </div>
   

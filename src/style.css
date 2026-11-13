@@ -1341,3 +1341,34 @@ h1, .about-title, .intro-title { font-weight: 700; letter-spacing: -0.035em; }
 /* Language dropdown in the navbar */
 .lang-select { font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; height: 38px; padding: 0 10px; margin-left: 6px; cursor: pointer; }
 .lang-select:hover { border-color: var(--accent); }
+
+/* Off the clock: mosaic of interests on the index. Mobile: 2 columns, spans packed by source order. */
+.life-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; gap: 12px; }
+.lf { position: relative; border-radius: var(--radius-l); overflow: hidden; border: 1px solid var(--line); background: var(--accent-soft); min-width: 0; }
+.lf-tall { grid-row: span 2; }
+.lf-big { grid-column: span 2; grid-row: span 2; }
+.lf-wide { grid-column: span 2; }
+.lf figure { margin: 0; position: absolute; inset: 0; }
+.lf img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.lf:hover img { transform: scale(1.035); }
+.lf figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 38px 14px 12px; color: #fff; background: linear-gradient(to top, rgba(8, 12, 20, .86) 0%, rgba(8, 12, 20, .55) 55%, rgba(8, 12, 20, 0) 100%); }
+.lf-tag { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; margin-bottom: 6px; border-radius: 999px; background: rgba(255, 255, 255, .18); border: 1px solid rgba(255, 255, 255, .28); backdrop-filter: blur(4px); }
+.lf figcaption p { margin: 0; font-size: 0.86rem; line-height: 1.4; color: rgba(255, 255, 255, .94); max-width: 40ch; }
+@media (min-width: 901px) {
+  .life-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 220px; gap: 14px; }
+  .lf-lake { grid-area: 1 / 1 / span 2 / span 1; }
+  .lf-soccer { grid-area: 1 / 2 / span 2 / span 2; }
+  .lf-sling { grid-area: 1 / 4 / span 2 / span 1; }
+  .lf-art { grid-area: 3 / 1 / span 2 / span 1; }
+  .lf-snow { grid-area: 3 / 2 / span 1 / span 2; }
+  .lf-kayak { grid-area: 3 / 4 / span 2 / span 1; }
+  .lf-mma { grid-area: 4 / 2 / span 1 / span 1; }
+  .lf-river { grid-area: 4 / 3 / span 1 / span 1; }
+  .lf figcaption p { font-size: 0.9rem; }
+}
+@media (prefers-reduced-motion: reduce) { .lf img { transition: none; } .lf:hover img { transform: none; } }
+
+/* Project pages: the main column is a <section>, so cancel the global section padding.
+   This keeps its first heading level with the top of the side box. */
+.pp-main { padding: 0; }
+.pp-main + .pp-side { margin-top: 0; }
