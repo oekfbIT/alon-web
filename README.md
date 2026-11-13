@@ -26,7 +26,7 @@ Double-clicking `index.html` no longer works (paths are now absolute, e.g. `/src
 | "Ask me" chat: logic | `src/ask.js` (browser), `src/retrieve.js` (search), `api/ask.js` (Vercel function) |
 | Files served as-is (portrait, link preview image) | `public/` → served from `/` |
 
-The portrait goes in `public/alon-portrait.jpg` (portrait orientation, about 4:5); until it exists a placeholder shows. The site has no CV download by choice.
+The portrait goes in `public/alon-portrait.jpg` (portrait orientation, about 4:5); until it exists a placeholder shows. The CV is served as a PDF from `public/Alon_Yakoby_CV.pdf`; every Résumé button opens it.
 
 Employment references (Dienstzeugnisse) are quoted in English translation on the homepage rather than attached, because the PDFs contain a date of birth, a home address and bank details.
 

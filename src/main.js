@@ -1,3 +1,4 @@
+import "./i18n.js";
 import "./projects.js";
 import "./toolbox.js";
 import "./ask.js";
@@ -79,3 +80,16 @@ import "./vision-demo.js";
     Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
   }
 })();
+
+
+// Reference dialogs (homepage "What employers say")
+document.querySelectorAll('[data-rec-dialog]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const dialog = document.getElementById('rec-' + btn.dataset.recDialog);
+    if (dialog && !dialog.open) dialog.showModal();
+  });
+});
+document.querySelectorAll('dialog.rec-dialog').forEach((dialog) => {
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+  dialog.querySelector('.rec-close')?.addEventListener('click', () => dialog.close());
+});

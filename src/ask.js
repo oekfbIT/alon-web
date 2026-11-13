@@ -44,37 +44,19 @@ export function typeInto(el, text, scroller) {
   });
 }
 
+/* The homepage widget is a preview, not a second chat: it never answers inline.
+   Any question (typed, submitted, or a suggested chip) opens the full chat at
+   /chat.html?q=… , which asks it there. */
 const root = document.getElementById('ask');
 if (root) {
-  const log = root.querySelector('.ask-log');
   const form = root.querySelector('.ask-form');
   const input = form.querySelector('input');
-  const btn = form.querySelector('button');
-  const state = root.querySelector('.ask-state');
-  const history = [];
-  let busy = false;
 
-  async function run(q) {
-    q = q.trim(); if (!q || busy) return;
-    busy = true; btn.disabled = true; state.textContent = 'thinking'; root.classList.add('is-busy');
-    const you = document.createElement('div'); you.className = 'ask-q'; you.textContent = q;
-    const a = document.createElement('div'); a.className = 'ask-a';
-    const body = document.createElement('p'); body.className = 'ask-text'; body.textContent = '…';
-    a.append(body); log.append(you, a); log.scrollTop = 1e6;
-    const res = await ask(q, history);
-    history.push({ role: 'user', content: q }, { role: 'assistant', content: res.answer });
-    await typeInto(body, res.answer, log);
-    if (res.sources && res.sources.length) {
-      const src = document.createElement('div'); src.className = 'ask-src';
-      const lbl = document.createElement('span'); lbl.textContent = res.mode === 'model' ? 'sources' : 'from my notes';
-      src.append(lbl);
-      res.sources.forEach((s) => { const l = document.createElement('a'); l.href = s.url; l.textContent = s.title; src.append(l); });
-      a.append(src);
-    }
-    log.scrollTop = 1e6;
-    busy = false; btn.disabled = false; state.textContent = 'ready'; root.classList.remove('is-busy');
+  function openWith(q) {
+    q = q.trim(); if (!q) { location.href = '/chat.html'; return; }
+    location.href = '/chat.html?q=' + encodeURIComponent(q);
   }
 
-  form.addEventListener('submit', (e) => { e.preventDefault(); const q = input.value; input.value = ''; run(q); });
-  root.querySelectorAll('.ask-chips button').forEach((b) => b.addEventListener('click', () => run(b.textContent)));
+  form.addEventListener('submit', (e) => { e.preventDefault(); openWith(input.value); });
+  root.querySelectorAll('.ask-chips button').forEach((b) => b.addEventListener('click', () => openWith(b.textContent)));
 }

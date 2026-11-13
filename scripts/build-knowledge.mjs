@@ -58,14 +58,17 @@ for (const path of files(kdir)) {
     const re = new RegExp(String.raw`^## (.+)$|^\*\*${prefix}(\d+)\.\s*(?:[🔴🟡⚪]\s*)?(.+?)\*\*\s*\n([\s\S]*?)(?=^\*\*${prefix}\d+\.|^---|^## |(?![\s\S]))`, 'gmu');
     for (const m of md.matchAll(re)) {
       if (m[1]) { section = m[1].replace(/^\d+\.\s*/, ''); continue; }
-      const [, , n, q, body] = m;
+      const [, , n, q] = m; let body = m[4];
+      // Optional "- Keywords: ..." line: extra search terms, not shown in answers.
+      const kw = (body.match(/^- Keywords:\s*(.+)$/m) || [, ''])[1];
+      body = body.replace(/^- Keywords:.*$\n?/m, '');
       let answer = body.trim();
       if (prefix === 'R') {
         const a = body.match(/- My answer:\s*([\s\S]*)$/);
         answer = a ? a[1].trim() : '';
         if (!answer) continue; // unanswered review questions are not knowledge yet
       }
-      add({ id: `${prefix.toLowerCase()}${n}`, title: q.trim(), url, tags: `interview question ${section}`, text: answer });
+      add({ id: `${prefix.toLowerCase()}${n}`, title: q.trim(), url, tags: `interview question ${section} ${kw}`, text: answer });
     }
     continue;
   }

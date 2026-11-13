@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { roles, roleById, roleUrl, logoUrl } from '../src/roles.js';
 import { projects, categories, projectUrl } from '../src/projects-data.js';
+import { skillIcon } from '../src/skill-icons.js';
 
 const root = resolve(import.meta.dirname, '..');
 const tpl = readFileSync(resolve(root, 'work/oekfb-federation-platform.html'), 'utf8');
@@ -19,10 +20,16 @@ const ext = (h) => /^https?:/.test(h) ? ' target="_blank" rel="noopener"' : '';
 function projectCard(p) {
   const c = categories[p.cat];
   const st = p.status === 'Live' ? ' is-live' : p.status === 'In progress' ? ' is-progress' : '';
-  const self = p.link === roleUrl(p.org);
-  return `<article class="pj-card" data-cat="${p.cat}"><div class="pj-top"><span class="pj-cat"><i class="pj-dot" style="--c:${c.color}"></i>${esc(c.label)}</span><span class="pj-status${st}">${esc(p.status)}</span></div>
-<h3><a href="${projectUrl(p)}">${esc(p.title)}</a></h3><p>${esc(p.text)}</p><ul class="pj-tech">${p.tech.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
-<div class="pj-foot"><span>${esc(p.when.includes('·') ? p.when.slice(p.when.indexOf('·') + 1).trim() : '')}</span><a href="${projectUrl(p)}">Open project →</a></div></article>`;
+  const href = projectUrl(p);
+  // Same preview block as the homepage cards: the image when there is one, otherwise a placeholder.
+  const media = p.image
+    ? `<img src="${esc(p.image)}" alt="" loading="lazy" decoding="async">`
+    : `<span class="pj-ph"><small>Preview coming soon</small></span>`;
+  return `<article class="pj-card" data-cat="${p.cat}">
+<a class="pj-media${p.image ? ' has-img' : ''}" href="${href}" tabindex="-1" aria-hidden="true">${media}<span class="pj-status${st}">${esc(p.status)}</span></a>
+<div class="pj-body"><span class="pj-cat"><i class="pj-dot" style="--c:${c.color}"></i>${esc(c.label)}</span>
+<h3><a href="${href}">${esc(p.title)}</a></h3><p>${esc(p.text)}</p><ul class="pj-tech">${p.tech.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+<div class="pj-foot"><span>${esc(p.when.includes('·') ? p.when.slice(p.when.indexOf('·') + 1).trim() : (roleById[p.org]?.dates || ''))}</span><a href="${href}">Open project →</a></div></div></article>`;
 }
 
 const phoneIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M12 7v6M9.5 10.5 12 13l2.5-2.5"/></svg>';
@@ -73,7 +80,7 @@ function press(r) {
 function page(r, i) {
   const built = projects.filter((p) => p.org === r.id);
   const prev = roles[i - 1], next = roles[i + 1];
-  const toc = [r.showcase && ['product', r.showcase.title || 'The product'], ['did', 'What I did'], r.team && ['team', 'The team'], ['learned', 'What I learned'], r.caseStudies.length && ['case-studies', 'Case studies'], built.length && ['built', 'Things I built'], r.press?.length && ['press', 'In the press'], ['skills', 'Skills']].filter(Boolean);
+  const toc = [built.length && ['built', 'Things I built'], r.showcase && ['product', r.showcase.title || 'The product'], ['did', 'What I did'], r.team && ['team', 'The team'], ['learned', 'What I learned'], r.caseStudies.length && ['case-studies', 'Case studies'], r.press?.length && ['press', 'In the press'], ['skills', 'Skills']].filter(Boolean);
   const desc = `${r.title} at ${r.org}, ${r.dates}. ${r.summary}`;
   const h = head
     .replace(/<title>.*?<\/title>/, `<title>${esc(r.org)} · ${esc(r.title)} | Alon Yakoby</title>`)
@@ -95,19 +102,19 @@ function page(r, i) {
   <div class="cs-body">
     <nav class="cs-toc" aria-label="On this page"><ol>${toc.map(([id, t]) => `<li><a href="#${id}">${t}</a></li>`).join('')}</ol></nav>
     <article>
+${built.length ? `<section class="cs-section" id="built"><h2>Things I built at ${esc(r.short)}</h2><div class="rp-grid">${built.map(projectCard).join('\n')}</div></section>` : ''}
 ${showcase(r)}
 <section class="cs-section" id="did"><h2>What I did</h2><ul class="role-hl">${r.did.map((d) => `<li>${esc(d)}</li>`).join('')}</ul></section>
 ${team(r)}
 <section class="cs-section" id="learned"><h2>What I learned</h2><p>${esc(r.learned)}</p></section>
 ${r.caseStudies.length ? `<section class="cs-section" id="case-studies"><h2>Case studies</h2><ul class="work-list rp-work">${r.caseStudies.map((c) => `<li class="work-item"><a href="${esc(c.href)}"><div><div class="work-ctx">${esc(r.short)} · case study</div><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></div><span class="work-go">${arrow}</span></a></li>`).join('')}</ul></section>` : ''}
-${built.length ? `<section class="cs-section" id="built"><h2>Things I built at ${esc(r.short)}</h2><div class="rp-grid">${built.map(projectCard).join('\n')}</div></section>` : ''}
 ${press(r)}
-<section class="cs-section" id="skills"><h2>Skills</h2><ul class="tags">${r.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></section>
+<section class="cs-section" id="skills"><h2>Skills</h2><ul class="tags">${r.tags.map((t) => { const ico = skillIcon(t); return `<li>${ico ? `<span class="ico" style="--ico:url(${ico})" aria-hidden="true"></span>` : ''}${esc(t)}</li>`; }).join('')}</ul></section>
     </article>
   </div>
   <nav class="cs-nav" aria-label="More roles">
-    ${prev ? `<a href="${roleUrl(prev.id)}"><small>Newer role</small><strong>${esc(prev.org)}</strong></a>` : '<span></span>'}
-    ${next ? `<a class="next" href="${roleUrl(next.id)}"><small>Earlier role</small><strong>${esc(next.org)}</strong></a>` : '<span></span>'}
+    ${prev ? `<a class="cs-nav-card" href="${roleUrl(prev.id)}">${logo(prev, 'logo logo-lg')}<span class="cs-nav-txt"><small>Newer role</small><strong>${esc(prev.org)}</strong></span></a>` : '<span></span>'}
+    ${next ? `<a class="next cs-nav-card" href="${roleUrl(next.id)}">${logo(next, 'logo logo-lg')}<span class="cs-nav-txt"><small>Earlier role</small><strong>${esc(next.org)}</strong></span></a>` : '<span></span>'}
   </nav>
 </div>
 `;

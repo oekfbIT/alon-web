@@ -17,4 +17,5 @@ it is what the chat is allowed to say about me.
 | `interview/to-review.md` | Questions where I'm weak or the facts are missing: to answer myself |
 
 Status: seeded on 2026-11-12 from `resume.html`, `index.html`, `work/*.html`, `src/projects.js`,
+In `interview/*.md`, an optional `- Keywords:` line under a question adds search terms for the chat without showing up in answers.
 `src/toolbox.js` and `src/knowledge.js`. The chat still reads `src/knowledge.js`. These files are not wired in yet.

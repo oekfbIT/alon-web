@@ -124,708 +124,911 @@ export const docs = [
   "id": "a1",
   "title": "Tell me about yourself.",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "I'm a full-stack engineer in Vienna with 8+ years of building, shipping and running software, with a backend focus in Swift, Python and TypeScript. I designed, built and run the platform behind Austria's small-field football federation, where around 150 matches are scored live every Sunday. I co-founded the collector marketplace THATSIT!, where I built the vision AI that matches listings to cards. Before that I shipped software for Deutsche Bank, the Vienna Insurance Group and a 200-room hotel. Now I'm moving fully into AI engineering."
  },
  {
   "id": "a2",
   "title": "Walk me through your CV.",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "I started at Bergner Group, an international housewares company, as a business and technology lead: rolling out a central CMS across 12 locations and replacing Excel processes with automated workflows. In 2019–2020 I led two freelance tech projects, then spent 2020–2022 as a senior iOS engineer on the Vienna Insurance Group's Losleben app. At adesso (2022–2023) I was a senior full-stack engineer on banking and health-insurance projects and interim Product Owner. Since November 2023 I've run technology for the ÖKFB as a volunteer board member, in 2025 I was technical lead for a hotel modernisation at Bridge, and since November 2025 I've been co-founder and technical product lead at THATSIT!."
  },
  {
   "id": "a3",
   "title": "Why do you want to move into AI engineering?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "I already put AI into products, and I use it every day to build them. I have AI features running in production: grounded match previews, generated kit images and vision-based card matching. What I enjoy most is the engineering around the model: structured outputs, durable jobs, cost control and keeping AI from inventing facts. That's where I want to spend all of my time."
  },
  {
   "id": "a4",
   "title": "What kind of role are you looking for?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "A full-stack or AI engineering role where I build AI features that real people rely on, ideally owning a feature from the problem through to running it in production."
  },
  {
   "id": "a5",
   "title": "When can you start?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "December 2026."
  },
  {
   "id": "a6",
   "title": "Where are you based?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "In Vienna, Austria."
  },
  {
   "id": "a7",
   "title": "Give me a one-minute summary of your AI experience.",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "Three things in production and one in progress. At the football federation, the backend computes the facts and an LLM only selects among them through strict JSON Schema outputs, so match previews can't invent results. They run as durable jobs with recorded model, prompt version and token usage. Also at the federation, an image pipeline turns an uploaded jersey into a standardised kit illustration. At THATSIT! I deployed DINOv2 embeddings with Qdrant vector search to match 2 million listings to 400,000 cards. Right now I'm building match analysis from video with YOLOv8 trained on my own labelled data, plus an MCP-connected vision model."
  },
  {
   "id": "a8",
   "title": "What are you most proud of?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "The ÖKFB platform. I designed and built it on my own as a volunteer, it runs five applications on one backend, and it automated more than 80% of the federation's routine admin work. Around 200 clubs and 8,000 players go through it, and it has to work every Sunday morning on a referee's phone."
  },
  {
   "id": "a9",
   "title": "What's the biggest project you've built?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "The ÖKFB platform: a public website, admin dashboard, team portal, referee portal and mobile app on one Swift/Vapor and MongoDB backend, with live scoring, Stripe payments, document-based onboarding, analytics and AI previews."
  },
  {
   "id": "a10",
   "title": "What makes you different from other candidates?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "I've owned systems end to end, from the board meeting to the production incident, so I build for the unglamorous parts: correct data, idempotent money, recoverable jobs. I bring that discipline to AI, which is why my AI features are trustworthy enough to publish. I also studied industrial design, so I start from the person using the thing."
  },
  {
   "id": "a11",
   "title": "Why should we hire you?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "I ship things that keep working. My platform scores 150 matches live every Sunday, I halved deployment time at adesso, and I cut front-desk effort by about 30% at a hotel. I also have AI already running in production, built with the reliability habits most AI prototypes lack."
  },
  {
   "id": "a12",
   "title": "What are your strengths?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "Turning complex requirements into scalable systems on my own, and owning them in production. My federation reference highlights exceptional technical expertise, entrepreneurial thinking and the ability to build scalable, economically sustainable solutions independently. Bridge highlighted initiative and a structured, independent way of working."
  },
  {
   "id": "a13",
   "title": "How would previous employers describe you?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "The ÖKFB president wrote that I stand out for exceptional technical expertise and entrepreneurial thinking, and that I set clear priorities through structured processes, delegation and transparent communication. Bridge Group wrote about my initiative, analytical thinking, and that I was the central interface between management, departments and external partners."
  },
  {
   "id": "a14",
   "title": "What are you working on right now?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "AI match analysis for our league: from any recording or live stream to shots, player positions and player identity. Detection, labelling, backend integration and the MCP server are in place. Events, positions and identity are what I'm building now. I'm also launching THATSIT! in December 2026."
  },
  {
   "id": "a15",
   "title": "Why sports tech?",
   "url": "/chat.html",
-  "tags": "interview question Introduction and motivation",
+  "tags": "interview question Introduction and motivation ",
   "text": "Amateur sport only works because people give their evenings and weekends to it, and I like being one of them. It's also a great engineering environment: when people rely on a tool live, on a pitch, reliability is the feature."
  },
  {
   "id": "a16",
   "title": "What's your main stack?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Backend: Swift with Vapor, Python with FastAPI, and TypeScript, on MongoDB and PostgreSQL. AI: PyTorch, Transformers, DINOv2, Qdrant, structured LLM outputs, YOLOv8. Frontend and mobile: React, React Native, native iOS. Infrastructure: Docker, Kubernetes, Jenkins, GitHub workflows, DigitalOcean."
  },
  {
   "id": "a17",
   "title": "Which languages are you strongest in?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Swift is my longest-running language: native iOS since 2020 and server-side Swift for the federation. TypeScript for React frontends, and Python for AI services."
  },
  {
   "id": "a18",
   "title": "Walk me through the ÖKFB architecture.",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "One Swift/Vapor 4 API on MongoDB, with five clients: a public website, admin dashboard, team portal and referee portal in React with TypeScript, plus a mobile app on iOS and Android. The backend owns business rules, payments, email, storage, scheduled jobs, the GA4 import and AI services. Background work runs on Vapor Queues and persisted jobs with distributed leases. Integrations are Stripe, Firebase Storage and Cloud Messaging, Expo push, SMTP and GA4. It's deployed with Docker on DigitalOcean."
  },
  {
   "id": "a19",
   "title": "How do you design background jobs that survive failure?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Jobs are persisted, not in memory. Workers claim them atomically and hold renewable leases, so a crashed replica's job gets picked up again. Retries use backoff, idempotency keys make re-running safe, and concurrency is bounded across replicas. I track separate steps (payment, accounting, email) so interrupted work resumes where it stopped."
  },
  {
   "id": "a20",
   "title": "Explain idempotency and where you've used it.",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "An operation is idempotent if doing it twice has the same effect as doing it once. In the federation's payments, idempotency keys and durable receipts stop double credits and double debits, for example when a postponement approval is retried. I use the same idea for AI jobs, so a retried generation doesn't publish twice."
  },
  {
   "id": "a21",
   "title": "How did you build payments?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Stripe Checkout and PaymentIntents. Every team has an account balance, and it's credited only after Stripe confirms the payment through a signed webhook. Idempotency keys prevent duplicates, interrupted processing resumes from persisted jobs, and paid invoices and confirmation emails are generated automatically."
  },
  {
   "id": "a22",
   "title": "How do you handle webhooks safely?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Verify the signature, treat the webhook as the source of truth for money (not the browser redirect), and make processing idempotent, because providers retry. Then record the effect durably before sending side effects like emails."
  },
  {
   "id": "a23",
   "title": "How do you handle pricing that changes over time?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Fees are configured centrally and versioned, and every financial action stores the fee version it used. That way old charges stay explainable after prices change. Registrations, cancellations, deposits, overdraft and postponement fees all run on it."
  },
  {
   "id": "a24",
   "title": "How do you handle concurrency across multiple replicas?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Shared leases and atomic claims. For example, the GA4 importer takes hourly snapshots exactly once across all replicas via a shared lease, and AI jobs use atomic claims with renewable leases. On the request side I cache and coalesce concurrent identical requests."
  },
  {
   "id": "a25",
   "title": "How do you secure a multi-user platform?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "Granular admin permissions, team ownership checks on every team resource, signed and expiring links, upload signature and size checks, idempotency keys and stale-write protection. Signed email links let people confirm a registration or transfer from their inbox without a login."
  },
  {
   "id": "a26",
   "title": "Tell me about a workflow you modelled as a state machine.",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "The referee portal: Assigned → Match sheet → Kick-off → Half-time → Second half → Full time → Report → Complete. Each state has clear correction paths: delete wrong events, adjust the score, reset a half, handle abandoned matches and no-shows. Results flow straight into tables, leaderboards and suspensions."
  },
  {
   "id": "a27",
   "title": "How did you design team onboarding?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "As a tracked workflow: application, email verification, documents, review, league assignment, payment, team creation. Partial submissions are allowed, but a team can't be assigned to a league until ID documents and signed contracts are complete. Failed emails are visible and resendable, and older records can be repaired explicitly."
  },
  {
   "id": "a28",
   "title": "What's your experience with REST APIs and OpenAPI?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "I design REST APIs as the contract between services. The federation backend serves five clients through one API documented with OpenAPI. At THATSIT! the matching model sits behind FastAPI so the Swift backend uses it like any other API. As a freelancer I designed the REST API architecture for a banking platform prototype."
  },
  {
   "id": "a29",
   "title": "Tell me about integrating a third-party API that was tricky.",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "GA4. I wrote a native Swift importer for the reporting and realtime APIs. The trap was that summing daily users gives wrong period totals, so I query proper period totals. It takes hourly snapshots once across replicas, caches and coalesces requests, and shows freshness, empty and failure states in the dashboard."
  },
  {
   "id": "a30",
   "title": "Which databases have you used?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "MongoDB most (the federation platform), PostgreSQL, and Qdrant as a vector database at THATSIT!."
  },
  {
   "id": "a31",
   "title": "How do you make a system maintainable by someone else?",
   "url": "/chat.html",
-  "tags": "interview question Backend and architecture",
+  "tags": "interview question Backend and architecture ",
   "text": "I document it and run it on clear processes. The federation platforms keep running and improving whether or not I'm in the room. I also put safeguards into code instead of tribal knowledge: migrations, indexes, ownership checks and tests with mocked external services."
  },
  {
   "id": "a32",
   "title": "What's your frontend experience?",
   "url": "/chat.html",
-  "tags": "interview question Frontend and mobile",
+  "tags": "interview question Frontend and mobile ",
   "text": "React and TypeScript. All four federation web apps are React 18 with Redux, React Router, Ant Design, Material UI and Storybook. For newer work I use Vite and Tailwind, with Vitest."
  },
  {
   "id": "a33",
   "title": "What's your mobile experience?",
   "url": "/chat.html",
-  "tags": "interview question Frontend and mobile",
+  "tags": "interview question Frontend and mobile ",
   "text": "I shipped the Vienna Insurance Group's Losleben iOS app (around 30,000 users) in Swift, including its CI/CD and App Store releases. Today I work with React Native at THATSIT!, and the federation app runs on iOS and Android."
  },
  {
   "id": "a34",
   "title": "Tell me about the Losleben app.",
   "url": "/chat.html",
-  "tags": "interview question Frontend and mobile",
+  "tags": "interview question Frontend and mobile ",
   "text": "It's a native iOS app of the Vienna Insurance Group with about 30,000 users. In a Scrum team I developed, tested and released features from requirement to App Store, set up and maintained the iOS CI/CD pipeline and App Store account, helped plan the roadmap, and mentored seven junior developers and five apprentices."
  },
  {
   "id": "a35",
   "title": "What's your CI/CD experience?",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "I set up the iOS pipeline with Fastlane at twinformatics, rebuilt the release pipeline at adesso with Jenkins, GitHub workflows and cloned Kubernetes environments, and built CI/CD automation as a freelancer. I've been doing CI/CD since 2020."
  },
  {
   "id": "a36",
   "title": "Tell me about the release pipeline rebuild.",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "At adesso, releasing for a white-label health-insurance app was slower than it needed to be. I made environments reproducible with cloned Kubernetes environments, so what was tested was what went live. I automated the path to production with Jenkins and GitHub workflows, and made reviews and 70%+ coverage a gate. Deployment time dropped by more than half across 28 releases."
  },
  {
   "id": "a37",
   "title": "How do you make releases less risky?",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "Make them boring. Use reproducible environments, an automated path to production and quality gates in the pipeline, then release often. Plan releases months ahead, so clients and teams know what's coming."
  },
  {
   "id": "a38",
   "title": "Docker and Kubernetes experience?",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "I run my own services in Docker and Docker Compose. That covers the federation backend on DigitalOcean and the THATSIT! matching service next to the app and backend. At adesso I worked with cloned Kubernetes environments as part of the release pipeline."
  },
  {
   "id": "a39",
   "title": "Which cloud providers have you used?",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "I've deployed to DigitalOcean, and worked with Azure and AWS."
  },
  {
   "id": "a40",
   "title": "How do you approach testing?",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "Code reviews and automated tests as a habit, with tests in the pipeline as a gate. At adesso we kept at least 70% coverage. The federation backend has XCTest/XCTVapor suites with mocked external services, and the frontends use Jest, React Testing Library and Vitest."
  },
  {
   "id": "a41",
   "title": "How do you test code that depends on external services?",
   "url": "/chat.html",
-  "tags": "interview question DevOps, releases and quality",
+  "tags": "interview question DevOps, releases and quality ",
   "text": "I mock them. In the federation backend, Stripe, email, storage and AI providers are mocked in XCTVapor tests, so tests are fast and deterministic. The AI provider also sits behind an interface, which makes swapping in a test double easy."
  },
  {
   "id": "a42",
   "title": "What AI have you shipped to production?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Grounded German match previews and matchday reviews and a jersey-to-kit image generator for the football federation, plus vision-based card matching at THATSIT!."
  },
  {
   "id": "a43",
   "title": "How do you stop an LLM from hallucinating?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Don't let it produce facts. In my match previews, the backend computes every fact (form, table position, head-to-head, scorers, discipline, absences) with a historical cutoff. The model only selects and orders those facts through strict JSON Schema outputs, and the backend writes the article. Admins review before publishing. Football fans notice a wrong number immediately, so this matters."
  },
  {
   "id": "a44",
   "title": "Walk me through the AI match preview system end to end.",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "A scheduled job picks upcoming fixtures. The backend builds a fact snapshot with a cutoff, so it never uses results from after the match, and handles incomplete rounds and awarded results explicitly. A persistent job calls the model through a provider interface, with strict JSON Schema output: which facts to use, in what order, and title candidates. The backend renders the German article and records the source snapshot, model, prompt version, selected facts and token usage. An admin reviews, edits, publishes or deletes it, and publishing is revision-safe."
  },
  {
   "id": "a45",
   "title": "What are structured outputs and why use them?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Structured outputs force the model to answer in a defined JSON Schema instead of free text. That makes the output machine-checkable, and it lets me restrict the model to choices instead of claims: in my previews it can only pick from verified facts."
  },
  {
   "id": "a46",
   "title": "How do you make AI pipelines reliable?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "I treat generation like any other critical background work: persistent jobs, bounded concurrency, atomic claims, renewable leases, retries with backoff and idempotency keys. Each output records the model, prompt version, inputs and token usage, so I can trace and reproduce it."
  },
  {
   "id": "a47",
   "title": "How do you version prompts and track model usage?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Every generated article stores the prompt version, model, source snapshot, selected facts and token usage. That gives provenance for every published piece and cost data per article."
  },
  {
   "id": "a48",
   "title": "How do you avoid vendor lock-in with model providers?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "The inference provider sits behind an interface. Today it's an OpenAI-compatible adapter, but the football logic doesn't depend on it. The planned MCP server follows the same principle: any model provider."
  },
  {
   "id": "a49",
   "title": "How do you control AI costs?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "I track them as part of the product, not as an afterthought. At THATSIT! I own the budget, including AI and cloud running costs, which grow with every listing. In the federation, every article records its token usage. I also keep the model's job small: compute what you can, let the model decide only what it must."
  },
  {
   "id": "a50",
   "title": "How do you keep a human in the loop?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "For the match previews, admins review, edit, publish or delete each article. For generated kit images, admins see a preview before anything is saved."
  },
  {
   "id": "a51",
   "title": "What are embeddings and how have you used them?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "An embedding turns an input, here a card image, into a vector that captures how it looks, so similar images end up close together. At THATSIT! DINOv2 embeds each listing image, and Qdrant finds the closest catalogue cards among 400,000."
  },
  {
   "id": "a52",
   "title": "Why did you frame card matching as search, not classification?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "With hundreds of thousands of near-identical cards, a classifier with 400,000 classes isn't practical. Embeddings let me compare a listing against the whole catalogue and return the closest matches, and new cards just need embedding, not retraining."
  },
  {
   "id": "a53",
   "title": "Why DINOv2?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "It gives strong general-purpose image embeddings out of the box, which avoided training a custom model from scratch."
  },
  {
   "id": "a54",
   "title": "Why a dedicated vector database?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Fast similarity search across the full catalogue. Qdrant handles that, so I don't have to build nearest-neighbour search myself."
  },
  {
   "id": "a55",
   "title": "How do you turn a model into a production service?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "I give it a clean API, predictable behaviour and a deployment the rest of the platform can rely on. At THATSIT! the matching runs as a separate Python service behind FastAPI in its own container, so the React Native app and Swift backend use it like any other API. A good model isn't a product yet."
  },
  {
   "id": "a56",
   "title": "What's the most important thing you've learned about applied AI?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "The interesting problems are often not about the model. They're about data, interfaces, cost, and how the rest of the system behaves when the model isn't sure."
  },
  {
   "id": "a57",
   "title": "What image generation have you done?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Generated kit images for the federation. An admin uploads a club's jersey, and the pipeline uses the jersey and a layout reference as image inputs to produce a standardised home or away kit. It validates the transparent PNG (structure, CRCs, visible pixels, transparent edges), shows a preview before saving to Firebase, and rejects stale saves."
  },
  {
   "id": "a58",
   "title": "What computer vision experience do you have?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Vision embeddings and vector search at THATSIT!, and YOLOv8 detection for football video. I trained the detector on my own Label Studio annotations of amateur match footage."
  },
  {
   "id": "a59",
   "title": "How did you create training data?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "I annotate amateur match footage in Label Studio with six classes: player, goalkeeper, referee, ball, goal and blank. A full match is close to 100,000 frames. I train on our own pitches, kits and camera angles instead of relying on generic sports datasets."
  },
  {
   "id": "a60",
   "title": "What's hard about detecting a football?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "It's small, fast and often hidden. It's the hardest class in my dataset. I also made the referee its own class, so officials never get counted as players."
  },
  {
   "id": "a61",
   "title": "How would you identify players in match video?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Use the data we already have. The federation stores every squad, jersey number and fixture, so identity becomes a matching problem against known players, not open-ended face recognition."
  },
  {
   "id": "a62",
   "title": "How do you combine specialised models with LLMs?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Specialised models first, a general model on top. YOLOv8 does the fast, frame-level detection. A vision model, reached through MCP, gets tools and match context for judgement. It's the same split as my previews: compute what you can, let the model decide only what it must."
  },
  {
   "id": "a63",
   "title": "What is MCP and how have you used it?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "The Model Context Protocol is a standard way to give AI models tools and context. In my match analysis, an MCP server gives a vision stream model access to tools and match context, so it can reason about what's happening, not just what's visible."
  },
  {
   "id": "a64",
   "title": "How would you expose an existing backend to AI assistants?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "That's my plan for the federation: a custom MCP server in front of the authenticated Vapor API, with permission-scoped tools for standings, fixtures, registrations, invoices and analytics. Football rules, accounting and permission checks stay in the backend, never in the model. Use cases include a league assistant, a registration assistant that explains missing documents, referee report drafts and a rules assistant with cited regulations."
  },
  {
   "id": "a65",
   "title": "What is RAG, and have you built it?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Retrieval-augmented generation: retrieve relevant passages first, then let the model answer only from them. The chat on my portfolio does this: BM25 retrieval over a knowledge base I wrote, the top passages as context, and the model answers only from them, with source links. Without a model configured, it shows the best passages directly."
  },
  {
   "id": "a66",
   "title": "Why BM25 rather than embeddings for your site chat?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "The knowledge base is small and written by me, so keyword search works well, needs no infrastructure, and can run in the browser as a fallback. I've used embedding search where it matters, for images at THATSIT!."
  },
  {
   "id": "a67",
   "title": "How do you use AI tools in your own engineering?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Daily, with Claude Code: prototyping, test writing and refactoring. I built my portfolio site with it as a pair programmer. The goal is building faster without lowering the bar."
  },
  {
   "id": "a68",
   "title": "How do you make a model's output safe to publish?",
   "url": "/chat.html",
-  "tags": "interview question AI and machine learning",
+  "tags": "interview question AI and machine learning ",
   "text": "Restrict what it can say (structured outputs over verified facts), record provenance, have a human review it, and validate generated artifacts mechanically, like my PNG checks on kit images."
  },
  {
   "id": "a69",
   "title": "What's your leadership experience?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "I've been interim Product Owner at adesso, technical lead at Bridge leading an interdisciplinary team, and Head of Technology on the federation's board, coordinating external partners and advising the board. At THATSIT! I lead sprint planning and retrospectives. At twinformatics I mentored seven juniors and five apprentices."
  },
  {
   "id": "a70",
   "title": "Tell me about mentoring.",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "At twinformatics I mentored seven junior developers and five apprentices in iOS development. Explaining my work to someone new is still the fastest way I know to find its weak parts."
  },
  {
   "id": "a71",
   "title": "Have you worked as a Product Owner?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "Yes, as interim Product Owner at adesso. I planned sprints and releases months ahead, 28 releases with 4 of them major, and turned user needs into specifications developers could build from. At THATSIT! I own the product vision, roadmap and launch plan."
  },
  {
   "id": "a72",
   "title": "How do you translate business needs into technical specs?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "Start from the people who will use it, and write the problem down in their words. Then turn it into a clear specification. At adesso I learned that a clear specification saves more time than any pipeline."
  },
  {
   "id": "a73",
   "title": "Tell me about a project you led end to end.",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "The hotel self-check-in at Bridge. I analysed how check-in actually worked at the front desk, worked out the concept with management, documented the existing IT, selected and integrated external partners, planned the server migration, and led the team to go-live. Front-desk effort dropped by about 30%."
  },
  {
   "id": "a74",
   "title": "How do you decide between building and buying?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "Buy, integrate, then build. At the hotel I evaluated and selected external technology partners and integrated them into the existing landscape instead of building everything from scratch. At THATSIT! I used a pre-trained DINOv2 and an existing vector database instead of training and building my own."
  },
  {
   "id": "a75",
   "title": "How do you get management to make a decision?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "Put it on paper. I wrote pitches, technical solution architectures and decision papers that gave management a clear basis for each choice, including its technical and commercial risks."
  },
  {
   "id": "a76",
   "title": "How do you work with stakeholders who aren't technical?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "I've been the central interface between management, departments and external partners at Bridge, ran client workshops at adesso, and advise a volunteer board at the federation. I start from their problem in their words and give them decisions with clear trade-offs."
  },
  {
   "id": "a77",
   "title": "How do you manage change in an operation that can't stop?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "At the hotel, the technical work was only half of it. The other half was getting management, staff and partners to agree on what changes, when, and who owns it afterwards. We modernised the infrastructure alongside the new workflows, so we weren't building new tools on old systems."
  },
  {
   "id": "a78",
   "title": "Experience with Scrum or Kanban?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "Both. I worked in Scrum teams at twinformatics and adesso, planned sprints as interim PO, and lead sprint planning and retrospectives at THATSIT!."
  },
  {
   "id": "a79",
   "title": "Have you worked with international teams?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "Yes. At Bergner I gathered requirements from international business teams and coordinated projects in Europe and Asia, across 12 locations. I speak German, English, Hebrew and some Chinese."
  },
  {
   "id": "a80",
   "title": "Have you managed a budget?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "At THATSIT! I keep the budget in check, including the running costs of AI tools, cloud services and infrastructure."
  },
  {
   "id": "a81",
   "title": "How do you work with external partners and vendors?",
   "url": "/chat.html",
-  "tags": "interview question Leadership, product and stakeholders",
+  "tags": "interview question Leadership, product and stakeholders ",
   "text": "At Bridge I selected and onboarded technology partners and integrated them. At the federation I coordinate external partners as Head of Technology."
  },
  {
   "id": "a82",
   "title": "Tell me about a time you automated a manual process.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "The federation ran on forms, emails, spreadsheets and phone calls. I built team onboarding, live scoring, payments and invoicing into one platform, and more than 80% of routine admin is now automated. Earlier, at Bergner, I replaced Excel processes with automated, department- and region-based workflows."
  },
  {
   "id": "a83",
   "title": "Tell me about a time you significantly improved a process.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "At adesso I rebuilt the release pipeline and cut deployment time by more than half, while keeping 70%+ test coverage as a gate."
  },
  {
   "id": "a84",
   "title": "Tell me about measurable business impact you delivered.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "Hotel self-check-in: around 30% less front-desk effort. Federation: 80%+ of admin automated. adesso: deployments more than twice as fast."
  },
  {
   "id": "a85",
   "title": "Tell me about a time you took initiative.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "I joined the federation's board as a volunteer and designed and built the entire platform that now runs it, on my own. Bridge's reference specifically highlights my high level of initiative."
  },
  {
   "id": "a86",
   "title": "Tell me about working under pressure or with something critical.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "Match day. Around 150 matches are scored live every Sunday from referees' phones at the side of a pitch. I designed the referee workflow with clear correction paths, because every shortcut eventually turns into a Sunday-morning phone call."
  },
  {
   "id": "a87",
   "title": "Tell me about a time you had to handle money correctly.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "Federation payments. I designed for retries, interruptions and duplicates from the start: credit only after Stripe confirms, idempotency keys, durable receipts, resumable jobs and versioned fees."
  },
  {
   "id": "a88",
   "title": "Tell me about a technical trade-off you made.",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "At THATSIT! I chose a pre-trained DINOv2 with vector search over training a custom classifier. It's faster to ship and scales to new cards without retraining. In return, quality depends on general-purpose embeddings, which I check with matching quality checks."
  },
  {
   "id": "a89",
   "title": "Have you worked in regulated industries?",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "Yes: banking (Deutsche Bank, a banking platform prototype), health insurance (Bitmarck, the IT provider for German statutory health insurers) and insurance (Vienna Insurance Group)."
  },
  {
   "id": "a90",
   "title": "Which domains have you worked in?",
   "url": "/chat.html",
-  "tags": "interview question Impact and behavioural (positive stories)",
+  "tags": "interview question Impact and behavioural (positive stories) ",
   "text": "Sports, marketplaces, banking, health insurance and insurance, hospitality, and international retail/housewares."
  },
  {
   "id": "a91",
   "title": "How do you approach a new project?",
   "url": "/chat.html",
-  "tags": "interview question Approach and values",
+  "tags": "interview question Approach and values ",
   "text": "I follow the same route every time: problem, workflow, architecture, build, test, release, operate, improve. It starts with the people who will use it: a referee entering a score on a phone, a receptionist checking in a guest. I write the problem down in their words."
  },
  {
   "id": "a92",
   "title": "How does your design background affect how you build?",
   "url": "/chat.html",
-  "tags": "interview question Approach and values",
+  "tags": "interview question Approach and values ",
   "text": "I studied industrial design before I wrote software for a living. It still shapes how I build: start from the person holding the thing, and leave out what they don't need."
  },
  {
   "id": "a93",
   "title": "What engineering principles do you follow?",
   "url": "/chat.html",
-  "tags": "interview question Approach and values",
+  "tags": "interview question Approach and values ",
   "text": "Reliability is the feature when people rely on a tool live. Boring releases are safe releases. Design for the unglamorous parts first: correct data, idempotent money, recoverable jobs, docs. And for AI: compute what you can, let the model decide only what it must."
  },
  {
   "id": "a94",
   "title": "How do you handle operating what you build?",
   "url": "/chat.html",
-  "tags": "interview question Approach and values",
+  "tags": "interview question Approach and values ",
   "text": "I own it. At the federation I'm responsible from the board meeting to the production incident, which is why I build safeguards and recovery paths in from the start."
  },
  {
   "id": "a95",
   "title": "What's your education?",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "A Bachelor of Industrial Design from Raffles Design Institute (2014–2016), and micro- and macroeconomics at the South China University of Technology in Guangzhou (2012–2014)."
  },
  {
   "id": "a96",
   "title": "Which languages do you speak?",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "German and English natively, Hebrew fluently, and conversational Chinese."
  },
  {
   "id": "a97",
   "title": "Tell me about THATSIT!.",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "A collector marketplace I co-founded, with over 400,000 cards and 2 million listings, launching in December 2026. I'm Technical Product Lead: I built the AI matching service and own the product vision, roadmap, launch plan and budget."
  },
  {
   "id": "a98",
   "title": "Tell me about Goodfield.",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "A side project: an all-in-one booking and management platform for padel, tennis and other sports clubs. Each club gets a branded public booking site plus a back office for bookings, events, finance and teams, instead of renting space on a marketplace."
  },
  {
   "id": "a99",
   "title": "What would you build if you had unlimited time?",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "An AI judge for trading card games: an iPhone camera follows the match, an agent checks whether plays are legal, keeps score and talks to the players."
  },
  {
   "id": "a100",
   "title": "What do you do outside work?",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "Grassroots football: I volunteer on the ÖKFB board. I also build side projects like Goodfield and AI match analysis for our league."
  },
  {
   "id": "a101",
   "title": "How can we reach you / see your work?",
   "url": "/chat.html",
-  "tags": "interview question Background facts",
+  "tags": "interview question Background facts ",
   "text": "Email alon.yakoby@gmail.com or LinkedIn (linkedin.com/in/alon-yakoby). The federation platform is live at oekfb.eu, and my case studies are on my site."
+ },
+ {
+  "id": "r1",
+  "title": "What's your biggest weakness?",
+  "url": "/chat.html",
+  "tags": "interview question Classic behavioural: no stories on file yet ",
+  "text": "When generative AI took off, I stayed in my traditional engineering lane for longer than I should have, and by the time I went all in, jumping back into the pool was harder than it would have been a year earlier. I've closed that gap deliberately: I now have AI running in production, from fact-grounded match previews to vision-based card matching, and I'm building match analysis with YOLOv8 and an MCP-connected vision model. What I took from it is to try new tools early, while the current stack still works, instead of waiting until the shift is obvious."
+ },
+ {
+  "id": "r2",
+  "title": "Tell me about a time you failed.",
+  "url": "/chat.html",
+  "tags": "interview question Classic behavioural: no stories on file yet failed failure mistake wrong",
+  "text": "My clearest failure was a release of the Vienna Insurance Group's Losleben iOS app at twinformatics. I was responsible for maintaining the app's CI/CD pipeline, and because we didn't confirm certain details before shipping, a version went out that crashed. We had to fix it immediately, and since every iOS fix has to pass Apple's review again, it took about two days until a confirmed build was live. We ran a postmortem and a dev jour fixe on what not to do and why tests are the base of any development that reaches production. It changed how I run releases: quality is a gate, not a phase, which is how I later rebuilt the release pipeline at adesso."
+ },
+ {
+  "id": "r6",
+  "title": "Tell me about a production incident you caused or handled.",
+  "url": "/chat.html",
+  "tags": "interview question Classic behavioural: no stories on file yet ",
+  "text": "At twinformatics I maintained the CI/CD pipeline for the Vienna Insurance Group's Losleben iOS app, used by around 30,000 people. On one release we didn't confirm certain details before shipping, and a version went out that crashed. We fixed it immediately, but because the fix had to go through Apple's review again, it took about two days until a confirmed build was live. Afterwards we held a postmortem and a dev jour fixe on what went wrong and why tests are the base of anything that reaches production. Since then I treat automated checks as a hard gate in every pipeline I own."
+ },
+ {
+  "id": "r7",
+  "title": "Tell me about a time you got critical feedback.",
+  "url": "/chat.html",
+  "tags": "interview question Classic behavioural: no stories on file yet ",
+  "text": "At twinformatics, in my early years as a developer, I took on more than I could chew, mostly to prove myself, and some team members experienced me as too dominant. It was uncomfortable to hear, but fair: taking everything on myself left less room for others. Today delegation is something I'm deliberate about. The ÖKFB president's reference specifically mentions targeted delegation and transparent communication, and the federation platform now runs with a team that handles the day-to-day without me."
+ },
+ {
+  "id": "r16",
+  "title": "Your tenures are short: twinformatics 19 months, adesso 18 months, Bridge fixed-term. Why?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice job hopping change jobs often lot moves short stays tenure",
+  "text": "Each move had a clear reason. Going from twinformatics to adesso took me from native iOS into senior full-stack work for enterprise clients like Deutsche Bank and Bitmarck. I left adesso because I needed shoulder surgery, and taking the time off wasn't possible in that setup, so I put my health first. Bridge was a fixed-term project by design: the technical takeover of a hotel, with a natural end once self-check-in was live. And the ÖKFB platform, which I've run since 2023, shows how I work when I can own something for the long term."
+ },
+ {
+  "id": "r17",
+  "title": "Between adesso (Nov 2023) and Bridge (Jan 2025), what was your paid work?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice gap career break 2024 time off injury surgery health recovery cv",
+  "text": "In late 2023 I had a serious shoulder injury: I couldn't raise my arm without dislocating it. Surgery, healing and physiotherapy took a little over 11 months, and for the first six I couldn't type properly. As I recovered, the ÖKFB approached me, and I designed and built the platform that now runs the federation. Alongside that, I'm a silent investor in a few startups and occasionally consult for them. I'm fully back to myself now."
+ },
+ {
+  "id": "r18",
+  "title": "Why are you looking for a job now?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "The two things I've been building have reached a natural handover point. The ÖKFB platform is essentially done: a team handles the day-to-day, and new features are outsourced or built in my spare time. At THATSIT! I laid the groundwork through the initial investment, and the US-based team is taking it from there, with me involved as a co-founder and shareholder. That frees me for what I want next: a full-time AI engineering role in a team where I can keep growing."
+ },
+ {
+  "id": "r19",
+  "title": "THATSIT! launches in December 2026, the same month you're available. Will you stay involved? How much time will it take?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "No, it won't compete. THATSIT! is a US company. I laid the groundwork for the initial investment and built the AI card matching, and the team is taking it from there. My role now is giving input as a co-founder and shareholder, not day-to-day work."
+ },
+ {
+  "id": "r20",
+  "title": "You also volunteer as Head of Technology at ÖKFB and build Goodfield. How will you fit a full-time job around that?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "No. The ÖKFB platform is pretty much done and documented, and there's a team that deals with the day-to-day. New features are either outsourced or something I build in my spare time. I receive some compensation, but honestly I do it as a volunteer, for my love of the game."
+ },
+ {
+  "id": "r22",
+  "title": "Why did you leave adesso?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "Toward the end of my time at adesso, the working relationship with the project's Product Owner, who had previously been our Scrum Master, became increasingly difficult. At the same time I needed shoulder surgery, and taking the time off wasn't possible in that setup, so I made my health the priority and left."
+ },
+ {
+  "id": "r23",
+  "title": "Why did you leave twinformatics?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "I left twinformatics for adesso. It moved me from native iOS into senior full-stack work on enterprise projects, for clients like Deutsche Bank, Bitmarck and B&O Gruppe."
+ },
+ {
+  "id": "r24",
+  "title": "Why not keep building your own startup instead of joining us?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "I've done the founder side, and it's in good hands: THATSIT! has a strong team in the US, and the ÖKFB platform runs on its own. What I want now is different: a team that pushes itself, room to grow toward leading a department, and the stability that matters to me as someone who's married and family-focused."
+ },
+ {
+  "id": "r25",
+  "title": "What are your salary expectations?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice salary pay money compensation expectations",
+  "text": "I'm looking for €65,000 to €75,000 gross per year, depending on the role and the overall package."
+ },
+ {
+  "id": "r26",
+  "title": "Remote, hybrid or on-site? Would you relocate?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice remote hybrid office onsite location work from home",
+  "text": "I'm flexible: remote, hybrid or on-site all work for me, and I find a mix is nice. I'm based in Vienna."
+ },
+ {
+  "id": "r27",
+  "title": "Where do you see yourself in five years?",
+  "url": "/chat.html",
+  "tags": "interview question Career path: things an interviewer will notice ",
+  "text": "In five years I want to be leading an engineering department, with AI at the core of what it builds. Personally, I'm married and family-focused, and I'm looking forward to having kids, so stability matters to me: I want a place where I can grow for the long term."
+ },
+ {
+  "id": "r33",
+  "title": "Have you built a production RAG system? Chunking, hybrid search, reranking, evaluation?",
+  "url": "/chat.html",
+  "tags": "interview question AI / ML depth: likely gaps for AI engineer roles ",
+  "text": "I'd call myself intermediate. I've built a small RAG system end to end: the chat on my portfolio retrieves passages with BM25, gives the best ones to a model that may only answer from them, and links its sources. I've also run embedding search in production with DINOv2 and Qdrant at THATSIT!. For production RAG at scale I know the next steps: chunking tuned to the documents, hybrid keyword and vector search, a reranker, metadata and permission filters, and an evaluation set to measure retrieval and answer quality before changing anything. The habit I bring from my match previews applies directly: retrieve or compute the facts first, and let the model only phrase them."
+ },
+ {
+  "id": "r34",
+  "title": "Have you built agents? Tool-calling loops, planning, LangChain/LangGraph or similar?",
+  "url": "/chat.html",
+  "tags": "interview question AI / ML depth: likely gaps for AI engineer roles ",
+  "text": "I'm at an intermediate level with agents. The closest I've built is my match analysis, where an MCP server gives a vision stream model tools and match context, so it can reason about what's happening on the pitch. I'm also planning an MCP server for the federation's backend with permission-scoped tools. To me the hard parts of agents are engineering ones: narrow, well-defined tools, permissions and business rules kept in the backend, durable execution with retries, and a log of every step so you can trace what the agent did. I haven't shipped a multi-step autonomous agent to production yet, and it's one of the things I want to do next."
+ },
+ {
+  "id": "r35",
+  "title": "Have you fine-tuned an LLM (LoRA, SFT, DPO)?",
+  "url": "/chat.html",
+  "tags": "interview question AI / ML depth: likely gaps for AI engineer roles ",
+  "text": "I haven't fine-tuned an LLM in production. My hands-on training experience is in vision: I train YOLOv8 on my own Label Studio annotations of amateur football footage. For language and image understanding I've reached for cheaper, more controllable tools first: pre-trained DINOv2 embeddings at THATSIT!, and structured outputs over computed facts for the match previews. I'd consider fine-tuning, for example with LoRA, when prompting and retrieval can't reach the quality, format or cost I need, and when I have enough good examples to both train and evaluate on."
+ },
+ {
+  "id": "r36",
+  "title": "Explain how transformers and attention work.",
+  "url": "/chat.html",
+  "tags": "interview question AI / ML depth: likely gaps for AI engineer roles ",
+  "text": "A transformer turns its input, words or image patches, into tokens with embeddings, then runs them through layers of self-attention. In each layer, every token builds a weighted mix of all the other tokens, with the weights coming from how well its query matches their keys, and the mix made from their values. Several attention heads run in parallel to pick up different relationships, followed by feed-forward layers, with residual connections and normalisation in between. Language models are trained to predict the next token. I use one in practice: DINOv2, which powers the matching at THATSIT!, is a vision transformer that learned its image representations through self-supervised training."
+ },
+ {
+  "id": "r39",
+  "title": "How do you defend against prompt injection?",
+  "url": "/chat.html",
+  "tags": "interview question AI / ML depth: likely gaps for AI engineer roles ",
+  "text": "I assume anything that reaches the model can be hostile, so the defence lives outside the model. In my match previews the model can only choose among facts the backend computed, through a strict JSON Schema, so an injected instruction has nothing to act on, and an admin reviews every article. On my site's chat the system prompt tells the model to ignore instructions in the question, input is length- and rate-limited, and only user and assistant turns are accepted from the browser. For tools and MCP the rule is least privilege: permission checks and business rules stay in the backend, so a manipulated model can't do more than the user could. For anything with real access I'd add output checks and red-team tests."
+ },
+ {
+  "id": "r44",
+  "title": "When would you use embeddings vs BM25 vs hybrid search?",
+  "url": "/chat.html",
+  "tags": "interview question AI / ML depth: likely gaps for AI engineer roles ",
+  "text": "BM25 when the text is small, curated and keyword-heavy, like the knowledge base behind my portfolio chat: it's fast, needs no infrastructure and is easy to debug. Embeddings when meaning matters more than exact words, or when the data isn't text at all, like the card images I match with DINOv2 and Qdrant at THATSIT!. In production I'd usually go hybrid: combine both scores, then rerank the top results, and measure which mix works on a real evaluation set."
+ },
+ {
+  "id": "r47",
+  "title": "Design a system for millions of users / high traffic.",
+  "url": "/chat.html",
+  "tags": "interview question Engineering depth ",
+  "text": "My largest systems are the federation platform, with around 8,000 players and 150 matches scored live every Sunday, and THATSIT!, with 2 million listings matched against 400,000 cards. I haven't run a system with millions of daily users, but the patterns I use are the ones that scale: API replicas with durable background jobs and leases so work runs exactly once, idempotency for anything that touches money, caching and coalescing of repeated requests, and a separate service with a vector database for the heavy AI workload. In a design interview I'd start from load estimates, then talk through caching, queues, database indexing and partitioning, and how the system degrades gracefully."
+ },
+ {
+  "id": "r51",
+  "title": "Observability: logging, metrics, tracing, alerting, on-call?",
+  "url": "/chat.html",
+  "tags": "interview question Engineering depth ",
+  "text": "Today my observability is built into the product: background jobs are persisted with their state, failed or pending emails are visible and can be resent, every AI article records its model, prompt version and token usage, and the analytics dashboards show freshness and failure states. In a larger setup I'd add structured logs, metrics and alerts on what users actually feel, like job backlog, error rates and payment webhook failures, plus tracing across services. I'm solid on the principles, and I'd grow into the tooling side with the team's stack."
+ },
+ {
+  "id": "r52",
+  "title": "Why Swift/Vapor for the backend? Would you choose it again?",
+  "url": "/chat.html",
+  "tags": "interview question Engineering depth ",
+  "text": "I come from native iOS development, and Swift on the server lets me share the same Swift packages, especially the data structures, across the backend and the apps. That means one definition of the models instead of keeping two in sync. It's a choice, not a limitation: I've also worked with PostgreSQL, FastAPI and Express, and I picked Python for the THATSIT! matching service because that's where the AI ecosystem is."
+ },
+ {
+  "id": "r57",
+  "title": "Node.js / TypeScript on the backend?",
+  "url": "/chat.html",
+  "tags": "interview question Engineering depth ",
+  "text": "Yes, I've worked with Express, though most of my backends are Swift with Vapor and Python with FastAPI. On the frontend, TypeScript is my everyday language."
+ },
+ {
+  "id": "r60",
+  "title": "Tell me about another weakness.",
+  "url": "/chat.html",
+  "tags": "interview question Added from my notes ",
+  "text": "In earlier positions I didn't read the politics of the company well, and I could be too rigid about how I thought things should be done. On occasion that meant more responsibility didn't come my way, even when the work itself was good. I've learned that how a decision is made, and who is part of it, matters as much as whether the technical answer is right. That's why at Bridge I put every major choice on paper, with pitches and decision papers for management."
+ },
+ {
+  "id": "r61",
+  "title": "What kind of team do you want to work in?",
+  "url": "/chat.html",
+  "tags": "interview question Added from my notes ",
+  "text": "A team that pushes itself to do more, but forgives mistakes and works as a collective to improve. I do my best work where standards are high and a mistake leads to a better process rather than blame, the way the postmortem after the iOS crash at twinformatics led to better release rules."
+ },
+ {
+  "id": "r62",
+  "title": "How senior are you as an AI engineer?",
+  "url": "/chat.html",
+  "tags": "interview question Added from my notes level good rate experience skills ai engineer how strong",
+  "text": "I'd describe myself as a senior software engineer and an intermediate AI engineer. The engineering around models is my strength: I have AI running in production with structured outputs, durable jobs, provenance and cost tracking, plus vision embeddings and vector search, and I'm training YOLOv8 on my own data. Where I'm still growing is the depth side, like production-scale RAG, autonomous agents and fine-tuning, which is exactly why I want a full-time AI role now."
+ },
+ {
+  "id": "r63",
+  "title": "Do you have other commitments or investments?",
+  "url": "/chat.html",
+  "tags": "interview question Added from my notes ",
+  "text": "I'm a silent investor in a few startups and occasionally consult for them. I'm a co-founder and shareholder of THATSIT!, and I volunteer on the ÖKFB board. None of it needs day-to-day time."
  },
  {
   "id": "profile-md-profile",
@@ -992,8 +1195,8 @@ export const docs = [
   "id": "role-thatsit",
   "title": "THATSIT!: Co-founder · Technical Product Lead",
   "url": "/experience/thatsit.html",
-  "tags": "experience role job THATSIT! THATSIT! Python FastAPI PyTorch DINOv2 Qdrant Docker React Native Swift",
-  "text": "Co-founder · Technical Product Lead at THATSIT!, Nov 2025 – Present (Founder).\nCollector marketplace with over 400,000 cards and 2 million listings. The web marketplace runs at thatsit.cards; the app launches in mid-December 2026.\n- Built AI card matching in Python with FastAPI, PyTorch and Transformers: DINOv2 image embeddings and Qdrant vector search link each listing to the right card.\n- Run it as containerised services next to a React Native app and a Swift backend.\n- Own product vision, roadmap and launch plan; lead sprint planning and retrospectives.\n- Keep the budget in check, including the running costs of AI tools, cloud services and infrastructure.\nBuy, sell and swap trading and sports cards in one place: Pokémon, One Piece, Magic, Yu-Gi-Oh!, sports cards and more, graded or raw, with protected payments. Card-for-card swaps carry no commission.\niOS and Android app · launching mid-December 2026\nI build THATSIT! with four co-founders. Eden Biniaurishvili is one of my best friends and closest colleagues, and one of Austria’s up-and-coming startup founders. Eden and Danell Daral, who built their previous company together, are both Forbes 30 Under 30 listmakers.\nTeam: Eden Biniaurishvili (Co-CEO, Forbes 30 Under 30), Coral Biniaurishvili (Co-CEO), Danell Daral (CMO, Forbes 30 Under 30), Alon Yakoby (CTO), Moritz Scheer (COO).\nWhat I learned: The interesting problems in applied AI are often not about the model. They are about data, interfaces, cost and how the rest of the system behaves when the model isn’t sure."
+  "tags": "experience role job THATSIT! THATSIT! Python FastAPI PyTorch DINOv2 Qdrant Docker React Native Swift Kotlin Jira",
+  "text": "Co-founder · Technical Product Lead at THATSIT!, Nov 2025 – Present (Founder).\nCollector marketplace with over 400,000 cards and 2 million listings. The web marketplace runs at thatsit.cards; the app launches in mid-December 2026.\n- Built AI card matching in Python with FastAPI, PyTorch and Transformers: DINOv2 image embeddings and Qdrant vector search link each listing to the right card.\n- Set up the whole backend and run the AI as containerised services.\n- Developed the React Native app with custom Swift and Kotlin native modules for Qdrant-powered card search: finding a card and its value among millions of options, rarities and prices.\n- Supported the frontend team in agentic development so they ship faster, and introduced Jira, Confluence and agile ways of working.\n- Own product vision, roadmap and launch plan; lead sprint planning and retrospectives.\n- Keep the budget in check, including the running costs of AI tools, cloud services and infrastructure.\nBuy, sell and swap trading and sports cards in one place: Pokémon, One Piece, Magic, Yu-Gi-Oh!, sports cards and more, graded or raw, with protected payments. Card-for-card swaps carry no commission.\niOS and Android app · launching mid-December 2026\nI build THATSIT! with four co-founders. Eden Biniaurishvili is one of my best friends and closest colleagues, and one of Austria’s up-and-coming startup founders. Eden and Danell Daral, who built their previous company together, are both Forbes 30 Under 30 listmakers.\nTeam: Eden Biniaurishvili (Co-CEO, Forbes 30 Under 30), Coral Biniaurishvili (Co-CEO), Danell Daral (CMO, Forbes 30 Under 30), Alon Yakoby (CTO), Moritz Scheer (COO).\nWhat I learned: The interesting problems in applied AI are often not about the model. They are about data, interfaces, cost and how the rest of the system behaves when the model isn’t sure."
  },
  {
   "id": "role-oekfb",
@@ -1014,14 +1217,14 @@ export const docs = [
   "title": "adesso: Senior Full-Stack Software Engineer",
   "url": "/experience/adesso.html",
   "tags": "experience role job adesso adesso Austria GmbH TypeScript React Jenkins GitHub workflows Kubernetes Docker",
-  "text": "Senior Full-Stack Software Engineer at adesso Austria GmbH, May 2022 – Nov 2023 (Full-time).\nClient projects for banking, health insurance, insurance and building services, in teams of 8 to 12 developers.\n- Built client applications for Deutsche Bank, Bitmarck and B&O Gruppe, with code reviews and at least 70% test coverage.\n- Rebuilt the CI/CD pipeline with Jenkins, GitHub workflows and cloned Kubernetes environments, cutting deployment time by more than half.\n- As interim Product Owner, planned sprints and releases months ahead: 28 releases, 4 of them major.\n- Ran client workshops, wrote technical concepts and took over interim project leadership for one launch.\nWhat I learned: Being both an engineer and the interim Product Owner taught me how much of delivery is about the bridge between users and the team: a clear specification saves more time than any pipeline."
+  "text": "Senior Full-Stack Software Engineer at adesso Austria GmbH, May 2022 – Nov 2023 (Full-time).\nClient projects for banking, health insurance, insurance and building services, in teams of 8 to 12 developers.\n- For Bitmarck, helped build a white-label app codebase rolled out to smaller German health insurers, with features switched on or off per customer order.\n- Then moved to B&O Gruppe to build a handyman app for their field staff, with a shared material catalogue and call-out coordination.\n- Worked on client applications for Deutsche Bank, with code reviews and at least 70% test coverage.\n- Rebuilt the CI/CD pipeline with Jenkins, GitHub workflows and cloned Kubernetes environments, cutting deployment time by more than half.\n- As interim Product Owner, planned sprints and releases months ahead: 28 releases, 4 of them major.\n- Ran client workshops, wrote technical concepts and took over interim project leadership for one launch.\nWhat I learned: Being both an engineer and the interim Product Owner taught me how much of delivery is about the bridge between users and the team: a clear specification saves more time than any pipeline."
  },
  {
   "id": "role-twinformatics",
   "title": "twinformatics: Senior iOS Engineer · Losleben app",
   "url": "/experience/twinformatics.html",
   "tags": "experience role job twinformatics twinformatics GmbH · Vienna Insurance Group Swift iOS Fastlane CI/CD Scrum",
-  "text": "Senior iOS Engineer · Losleben app at twinformatics GmbH · Vienna Insurance Group, Sep 2020 – Apr 2022 (Full-time).\nNative iOS app of the Vienna Insurance Group with around 30,000 users.\n- Developed, tested and released features in a Scrum team, from requirement to App Store.\n- Set up and maintained the iOS CI/CD pipeline and the App Store account.\n- Helped prioritise features and plan the roadmap with product stakeholders.\n- Mentored seven junior developers and five apprentices.\nWhat I learned: Mentoring seven junior developers and five apprentices taught me that explaining my work to someone new is the fastest way to find its weak parts, and that a reliable release pipeline is what lets a small team ship to 30,000 users with confidence."
+  "text": "Senior iOS Engineer · Losleben app at twinformatics GmbH · Vienna Insurance Group, Sep 2020 – Apr 2022 (Full-time).\nNative iOS app of the Vienna Insurance Group with around 30,000 users.\n- Implemented Onfido identity verification in the app: document scan and selfie check for secure customer onboarding.\n- Built the in-app car insurance check (Kfz-Versicherungscheck).\n- Developed, tested and released features in a Scrum team, from ticket to App Store, and kept a steady sprint completion rate.\n- Handled support tickets and prioritised incoming issues with product stakeholders.\n- Set up and maintained the iOS CI/CD pipeline and the App Store account.\n- Taught seven apprentices and, with them, built an internal vaccination check for company events during the pandemic.\nWhat I learned: Teaching seven apprentices taught me that explaining my work to someone new is the fastest way to find its weak parts, and that a reliable release pipeline is what lets a small team ship to 30,000 users with confidence."
  },
  {
   "id": "role-freelance",
@@ -1108,11 +1311,11 @@ export const docs = [
   "text": "Payments & Team Onboarding (Live, ÖKFB): Document-based team registration and Stripe payments with verified webhooks, idempotent credits, versioned fees, invoices and recovery after interruptions."
  },
  {
-  "id": "project-ga4-analytics-importer",
-  "title": "GA4 Analytics Importer",
-  "url": "/work/oekfb-federation-platform.html#analytics",
-  "tags": "project built Live ÖKFB Swift GA4 APIs MongoDB Leases React",
-  "text": "GA4 Analytics Importer (Live, ÖKFB): Native Swift importer for Google Analytics 4 with hourly snapshots, shared leases across replicas, caching and historical and realtime dashboards."
+  "id": "project-release-pipeline-rebuild",
+  "title": "Release Pipeline Rebuild",
+  "url": "/work/adesso-release-pipeline.html",
+  "tags": "project built Shipped adesso · 2022 – 2023 Jenkins GitHub workflows Kubernetes Docker Testing",
+  "text": "Release Pipeline Rebuild (Shipped, adesso · 2022 – 2023): Rebuilt CI/CD with Jenkins, GitHub workflows and cloned Kubernetes environments, halving deployment time across 28 releases."
  },
  {
   "id": "project-hotel-self-check-in",
@@ -1120,6 +1323,13 @@ export const docs = [
   "url": "/work/bridge-hotel-self-checkin.html",
   "tags": "project built Shipped Bridge · 2025 Self-service flows Server migration Vendor integration",
   "text": "Hotel Self-Check-in (Shipped, Bridge · 2025): Mobile self-check-in and an IT modernisation for a 200-room hotel, from front-desk analysis to go-live, with around 30% less front-desk effort."
+ },
+ {
+  "id": "project-onfido-id-verification",
+  "title": "Onfido ID Verification",
+  "url": "/projects/onfido-id-verification.html",
+  "tags": "project built Shipped twinformatics · 2020 – 2022 Swift iOS Onfido SDK Identity verification REST APIs",
+  "text": "Onfido ID Verification (Shipped, twinformatics · 2020 – 2022): Identity verification in the Losleben iOS app with the Onfido SDK: customers scan an ID document and take a selfie, and are verified before onboarding."
  },
  {
   "id": "project-losleben-ios-app",
