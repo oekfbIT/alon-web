@@ -1,18 +1,26 @@
 /* "Ask me" chat: retrieval over src/kb.js, answered by /api/ask when a model is configured,
    otherwise answered directly from the best-matching passages.
    Exports ask() for the full chat page (src/chat.js); also runs the small widget on the homepage. */
-import { retrieve } from './kb.js';
+import { retrieve, allDocs, isGerman } from './kb.js';
 
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export function localAnswer(q, previous = '') {
-  const found = retrieve(q, previous, 3);
+  const de = isGerman(q) || document.documentElement.lang === 'de';
+  const txt = (d) => (de && d.textDe) || d.text;
+  let found = retrieve(q, previous, 4);
+  // In German, prefer entries that have a German answer.
+  if (de && found.some((d) => d.textDe)) found = [...found.filter((d) => d.textDe), ...found.filter((d) => !d.textDe)];
   if (!found.length) {
-    return { answer: 'I don’t have an answer to that here. Try asking about my stack, my AI work, the football platform or when I can start, or email me at alon.yakoby@gmail.com.', sources: [{ title: 'Contact', url: '/#contact' }], mode: 'notes' };
+    const intro = allDocs.find((d) => d.id === 'intro');
+    const tail = de
+      ? 'Zu dieser Frage habe ich hier keine eigene Antwort. Frag mich gern nach meinem Stack, meiner KI-Arbeit, der Fußballplattform, Banking-Erfahrung oder wann ich starten kann, oder schreib mir an alon.yakoby@gmail.com.'
+      : 'I don’t have a specific answer to that here. Ask me about my stack, my AI work, the football platform, banking experience or when I can start, or email me at alon.yakoby@gmail.com.';
+    return { answer: txt(intro) + '\n\n' + tail, sources: [{ title: de ? 'Kontakt' : 'Contact', url: '/#contact' }], mode: 'notes' };
   }
-  const parts = [found[0].text];
-  if (found[1] && found[1].score > found[0].score * 0.85) parts.push(found[1].text);
-  const links = found.filter((d) => d.url && d.url !== '/chat.html').map(({ title, url }) => ({ title, url }));
+  const parts = [txt(found[0])];
+  found.slice(1, 3).forEach((d) => { if (d.score > found[0].score * 0.7 && (!de || d.textDe || !found[0].textDe)) parts.push(txt(d)); });
+  const links = found.filter((d) => d.url && d.url !== '/chat.html').filter((d, i, a) => a.findIndex((x) => x.url === d.url) === i).slice(0, 3).map(({ title, url }) => ({ title, url }));
   return { answer: parts.join('\n\n'), sources: links, mode: 'notes' };
 }
 

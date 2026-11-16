@@ -1087,7 +1087,7 @@ span.mv-jersey { cursor: default; flex: none; }
 
 /* Experience: one row per role */
 .xp { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-l); padding: 10px 14px; }
-.xp-axis, .xp-row { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr) 172px 36px; gap: 16px; align-items: center; }
+.xp-row { display: grid; grid-template-columns: minmax(0, 1fr) auto 36px; gap: 16px; align-items: center; }
 .xp-axis { grid-template-columns: minmax(0, 320px) minmax(0, 1fr) 224px; padding: 4px 10px 0; }
 .xp-list { list-style: none; margin: 4px 0 0; padding: 0; }
 .xp-list li + li { border-top: 1px solid var(--line); }
@@ -1339,7 +1339,7 @@ h1, .about-title, .intro-title { font-weight: 700; letter-spacing: -0.035em; }
 @media (max-width: 620px) { .pp-gallery.is-wide { grid-template-columns: 1fr; } }
 
 /* Language dropdown in the navbar */
-.lang-select { font: inherit; font-size: 0.9rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; height: 38px; padding: 0 10px; margin-left: 6px; cursor: pointer; }
+.lang-select { font: inherit; font-size: 0.9rem; color: var(--ink); -webkit-appearance: none; appearance: none; background-color: var(--surface); background-image: linear-gradient(45deg, transparent 50%, var(--slate) 50%), linear-gradient(135deg, var(--slate) 50%, transparent 50%); background-position: calc(100% - 20px) 52%, calc(100% - 15px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; border: 1px solid var(--line); border-radius: 999px; height: 38px; padding: 0 38px 0 16px; margin-left: 6px; cursor: pointer; }
 .lang-select:hover { border-color: var(--accent); }
 
 /* Off the clock: mosaic of interests on the index. Mobile: 2 columns, spans packed by source order. */

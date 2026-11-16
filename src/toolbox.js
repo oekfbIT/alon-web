@@ -65,7 +65,6 @@ export const skills = [
 ];
 
 /* ---------- Rendering: one row per area ---------- */
-const NOW = new Date().getFullYear();
 const mk = (t, c, x) => { const n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; };
 const list = document.querySelector('#toolbox-app .sk-list');
 if (list) {
@@ -75,7 +74,6 @@ if (list) {
     const dd = mk('dd'); const ul = mk('ul', 'sk-items');
     items.forEach((s) => {
       const li = mk('li', s.strong ? 'is-strong' : null, s.name);
-      if (s.strong && s.since) { const y = mk('small', null, `${NOW - s.since}y`); y.title = `since ${s.since}`; li.append(y); }
       ul.append(li);
     });
     dd.append(ul);

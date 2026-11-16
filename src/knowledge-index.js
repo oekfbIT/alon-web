@@ -1248,6 +1248,13 @@ export const docs = [
   "text": "AI Match Analysis (In progress, ÖKFB · 2026): Takes a match recording or live stream and finds shots and key events, tracks where players move and identifies who they are from preloaded squads. YOLOv8 trained on my own Label Studio data, connected to my backend, with an MCP-connected vision model."
  },
  {
+  "id": "project-ai-judge-for-card-games",
+  "title": "AI Judge for Card Games",
+  "url": "/projects/ai-judge-for-card-games.html",
+  "tags": "project built In progress Personal project Vision AI Real-time video Voice Agents iOS",
+  "text": "AI Judge for Card Games (In progress, Personal project): An iPhone camera follows a trading card game, an AI agent checks whether plays are legal, keeps score and talks to the players."
+ },
+ {
   "id": "project-ai-match-previews-reviews",
   "title": "AI Match Previews & Reviews",
   "url": "/work/oekfb-federation-platform.html#ai",
@@ -1267,13 +1274,6 @@ export const docs = [
   "url": "/work/oekfb-federation-platform.html#ai",
   "tags": "project built Live ÖKFB Image generation PNG validation Firebase Storage React Swift",
   "text": "Generated Kit Images (Live, ÖKFB): Turns an uploaded jersey into a standardised home or away kit illustration, validates the transparent PNG and shows a preview before it is saved."
- },
- {
-  "id": "project-ai-judge-for-card-games",
-  "title": "AI Judge for Card Games",
-  "url": "/index.html#resume",
-  "tags": "project built In progress Personal project Vision AI Real-time video Voice Agents iOS",
-  "text": "AI Judge for Card Games (In progress, Personal project): An iPhone camera follows a trading card game, an AI agent checks whether plays are legal, keeps score and talks to the players."
  },
  {
   "id": "project-football-league-website",
