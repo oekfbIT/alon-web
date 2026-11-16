@@ -24,7 +24,6 @@
  "Ask me about my work": "Frag mich zu meiner Arbeit",
  "ready": "bereit",
  "// interview mode": "// Interview-Modus",
- "Hi, I’m Alon’s portfolio assistant. Think of this as a quick first interview: ask what you would ask me in a call, about my experience, projects, stack or availability. Every answer comes from my real work, with links to the source.": "Hallo, ich bin Alons Portfolio-Assistent. Stell dir das als kurzes erstes Gespräch vor: Frag mich, was du in einem Telefonat fragen würdest, zu meiner Erfahrung, meinen Projekten, meinem Stack oder meiner Verfügbarkeit. Jede Antwort stammt aus meiner echten Arbeit, mit Links zur Quelle.",
  "Tell me about yourself": "Erzähl mir von dir",
  "What’s your strongest project?": "Was ist dein stärkstes Projekt?",
  "What AI have you shipped?": "Welche KI hast du ausgeliefert?",
@@ -1028,5 +1027,6 @@
  "AI-generated answers from my own notes. For anything important,": "KI-generierte Antworten aus meinen eigenen Notizen. Für alles Wichtige",
  "email me": "schreib mir eine E-Mail",
  "8+ years as a full-stack engineer and technical lead across banking, insurance, hospitality, sports and online marketplaces.": "Über 8 Jahre als Full-Stack-Engineer und Technical Lead in Banking, Versicherung, Hotellerie, Sport und Online-Marktplätzen.",
- "I build software that people rely on every day.": "Ich baue Software, auf die sich Menschen jeden Tag verlassen."
+ "I build software that people rely on every day.": "Ich baue Software, auf die sich Menschen jeden Tag verlassen.",
+ "Hi, I’m Alon’s portfolio assistant, a chatbot he built on RAG over his own CV and project notes, now moving onto his own MCP server. Ask what you would ask in a first interview: experience, projects, stack or availability. Every answer comes from his real work, with links to the source.": "Hi, ich bin Alons Portfolio-Assistent, ein Chatbot, den er mit RAG auf seinem eigenen Lebenslauf und seinen Projektnotizen gebaut hat und der gerade auf seinen eigenen MCP-Server umzieht. Frag, was du in einem ersten Interview fragen würdest: Erfahrung, Projekte, Stack oder Verfügbarkeit. Jede Antwort stammt aus seiner echten Arbeit, mit Links zur Quelle."
 }
